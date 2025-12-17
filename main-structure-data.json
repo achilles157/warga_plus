@@ -1,0 +1,66 @@
+{
+    "release_id": "sejarah_01",
+    "title": "Cacat Wawasan",
+    "description": "Membongkar mitos Orde Baru mulai dari Serangan Umum hingga Wawasan sekarang.",
+    "cover_image": "https://.../cover.jpg",
+    "author": "Tim Riset Warga+",
+    "created_at": "TIMESTAMP",
+    "tags": [
+        "history",
+        "politics",
+        "critical_thinking",
+        "human_rights"
+    ],
+    "total_xp": 500,
+    "sub_modules": [
+        {
+            "id": "sub_01",
+            "title": "Mitos Sang Jenderal",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking",
+                "history"
+            ],
+            "xp_reward": 30,
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Eh, lo tau film Janur Kuning ga? 🎬"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Tau, film jadul",
+                        "Gak tau, film apaan?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Itu film propaganda wajib zaman Orba. Di situ Soeharto digambarkan kayak superhero Marvel sendirian."
+                },
+                {
+                    "role": "ai",
+                    "text": "Padahal faktanya, riset membuktikan inisiator aslinya Sultan HB IX."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Fakta Kunci",
+                    "content": "- Inisiator Asli: Sultan HB IX\n- Peran Soeharto: Pelaksana Lapangan\n- Tujuan: Diplomasi ke PBB"
+                }
+            ]
+        },
+        {
+            "id": "sub_02",
+            "title": "Dokumen Hilang",
+            "type": "redacted_doc",
+            "estimated_time": "1 min",
+            "specific_tags": [
+                "history",
+                "law_policy"
+            ],
+            "xp_reward": 60,
+            "content": "Naskah asli Supersemar itu [HILANG]. Sampai hari ini, negara hanya menyimpan [TIGA] versi yang berbeda, dan semuanya dinyatakan tidak otentik oleh uji forensik lab Polri."
+        }
+    ]
+}
