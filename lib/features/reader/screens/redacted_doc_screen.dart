@@ -95,7 +95,9 @@ class RedactedDocScreen extends StatelessWidget {
         child: ElevatedButton.icon(
           onPressed: () async {
             await ProfileService().completeModule(subModule);
-            if (context.mounted) Navigator.pop(context);
+            if (context.mounted) {
+              _showCompletionDialog(context);
+            }
           },
           icon: const Icon(Icons.check_circle_outline),
           label: const Text("SELESAI DIBACA"),
@@ -105,6 +107,64 @@ class RedactedDocScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
           ),
         ).animate().scale(delay: 1200.ms, curve: Curves.elasticOut),
+      ),
+    );
+  }
+
+  void _showCompletionDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => Dialog(
+        backgroundColor: Colors.transparent,
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset('assets/badges/xp_star.png', width: 100, height: 100)
+                  .animate(onPlay: (c) => c.repeat(reverse: true))
+                  .scale(
+                      begin: const Offset(1, 1),
+                      end: const Offset(1.1, 1.1),
+                      duration: 1000.ms)
+                  .then()
+                  .shimmer(duration: 1200.ms),
+              const SizedBox(height: 16),
+              const Text("MODULE COMPLETED!",
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20)),
+              const SizedBox(height: 8),
+              Text("+${subModule.xpReward} XP",
+                  style: const TextStyle(
+                      color: Colors.amber,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold)),
+              const SizedBox(height: 24),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context); // close dialog
+                    Navigator.pop(context); // close screen
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: const Text("LANJUTKAN"),
+                ),
+              )
+            ],
+          ),
+        ).animate().scale(duration: 400.ms, curve: Curves.easeOutBack),
       ),
     );
   }

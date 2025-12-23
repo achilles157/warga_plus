@@ -40,6 +40,7 @@ class SubModule {
   final String? content; // For redacted_doc
   final int xpReward;
   final List<String>? specificTags;
+  final String? aiContext;
 
   SubModule({
     required this.id,
@@ -49,6 +50,7 @@ class SubModule {
     this.content,
     this.xpReward = 0,
     this.specificTags,
+    this.aiContext,
   });
 
   factory SubModule.fromJson(Map<String, dynamic> json) {
@@ -60,6 +62,7 @@ class SubModule {
       content: json['content'] as String?,
       xpReward: json['xp_reward'] as int? ?? 0,
       specificTags: (json['specific_tags'] as List<dynamic>?)?.cast<String>(),
+      aiContext: json['ai_context'] as String?,
     );
   }
 
@@ -72,6 +75,9 @@ class SubModule {
     };
     if (specificTags != null) {
       data['specific_tags'] = specificTags;
+    }
+    if (aiContext != null) {
+      data['ai_context'] = aiContext;
     }
     if (chatScript != null) {
       data['chat_script'] = chatScript;

@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../../core/models/release_model.dart';
 import '../widgets/reader_widgets.dart';
+import '../widgets/live_chat_sheet.dart';
 import '../../profile/services/profile_service.dart';
 
 class ChatStreamScreen extends StatefulWidget {
   final SubModule subModule;
+  final String releaseId;
 
-  const ChatStreamScreen({super.key, required this.subModule});
+  const ChatStreamScreen({
+    super.key,
+    required this.subModule,
+    required this.releaseId,
+  });
 
   @override
   State<ChatStreamScreen> createState() => _ChatStreamScreenState();
@@ -68,27 +74,16 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
         }
       });
 
+      // Auto-finish typing if needed
       if (_isTyping) {
-        _startTypingScroll();
+        // No need to continuously scroll as the layout size is now stable from the start.
+        // Just ensure we are at the bottom once.
+        WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToBottom());
       }
     }
   }
 
-  void _startTypingScroll() async {
-    while (_isTyping && mounted) {
-      await Future.delayed(const Duration(milliseconds: 100));
-      if (_isTyping && mounted) {
-        _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent +
-              50, // Gentle nudge to keep revealing
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.linear,
-        );
-      }
-    }
-    // Final scroll to ensure bottom
-    _scrollToBottom();
-  }
+  // Removed _startTypingScroll as it causes jitter with stable layout.
 
   void _scrollToBottom() {
     if (_scrollController.hasClients) {
@@ -221,6 +216,22 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            builder: (context) => LiveChatSheet(
+              aiContext: widget.subModule.aiContext ?? '',
+              releaseTitle: widget.subModule.title,
+              moduleType: widget.subModule.type,
+            ),
+          );
+        },
+        backgroundColor: Colors.indigo,
+        child: const Icon(Icons.psychology, color: Colors.white),
+      ),
     );
   }
 
@@ -228,12 +239,13 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
     if (isFinished) {
       return Container(
         padding: const EdgeInsets.all(24),
-        // Removed white box decoration
         child: SafeArea(
           child: ElevatedButton.icon(
             onPressed: () async {
               await ProfileService().completeModule(widget.subModule);
-              if (mounted) Navigator.pop(context);
+              if (mounted) {
+                _showCompletionDialog(context);
+              }
             },
             icon: const Icon(Icons.verified_user_outlined),
             label: const Text(
@@ -254,9 +266,6 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
       );
     }
 
-    // Check current item from FULL script (the one waiting to be revealed or interacted with)
-    // Wait, _currentIndex points to the NEXT item to be added.
-    // So if _currentIndex < length, we have a pending item.
     final nextItem = _fullScript[_currentIndex] as Map<String, dynamic>;
     final nextRole = nextItem['role'];
 
@@ -274,14 +283,11 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
                       width: double.infinity,
                       child: OutlinedButton(
                         onPressed: () {
-                          // 1. Add synthetic user bubble
                           setState(() {
                             _visibleScript
                                 .add({'role': 'user_selected', 'text': opt});
-                            _currentIndex++; // Skip the 'user_choice' item in index
+                            _currentIndex++;
                           });
-                          // 2. Advance again to show AI response immediately?
-                          // Usually yes.
                           Future.delayed(const Duration(milliseconds: 300),
                               () => _advanceScript());
                         },
@@ -299,9 +305,64 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
       );
     }
 
-    // Default "Tap to Continue" interaction
-    // Default "Tap to Continue" interaction (Invisible now since whole screen taps)
-    // We can show a small indicator or nothing.
     return const SizedBox.shrink();
+  }
+
+  void _showCompletionDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => Dialog(
+        backgroundColor: Colors.transparent,
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset('assets/badges/xp_star.png', width: 100, height: 100)
+                  .animate(onPlay: (c) => c.repeat(reverse: true))
+                  .scale(
+                      begin: const Offset(1, 1),
+                      end: const Offset(1.1, 1.1),
+                      duration: 1000.ms)
+                  .then()
+                  .shimmer(duration: 1200.ms),
+              const SizedBox(height: 16),
+              const Text("MODULE COMPLETED!",
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20)),
+              const SizedBox(height: 8),
+              Text("+${widget.subModule.xpReward} XP",
+                  style: const TextStyle(
+                      color: Colors.amber,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold)),
+              const SizedBox(height: 24),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context); // close dialog
+                    Navigator.pop(context); // close screen
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigo,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  child: const Text("LANJUTKAN"),
+                ),
+              )
+            ],
+          ),
+        ).animate().scale(duration: 400.ms, curve: Curves.easeOutBack),
+      ),
+    );
   }
 }

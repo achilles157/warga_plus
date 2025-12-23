@@ -96,4 +96,50 @@ class ContentService {
       rethrow;
     }
   }
+
+  /// Update AI Context for a specific Sub-Module (Granular RAG Update)
+  /// Expects: { "release_id": "...", "sub_module_id": "...", "ai_context": "..." }
+  Future<void> updateSubModuleContext(Map<String, dynamic> json) async {
+    try {
+      final releaseId = json['release_id'];
+      final subModuleId = json['sub_module_id'];
+      final aiContext = json['ai_context'];
+
+      if (releaseId == null || subModuleId == null || aiContext == null) {
+        throw const FormatException(
+            'Missing release_id, sub_module_id, or ai_context');
+      }
+
+      final docRef = _releasesCollection.doc(releaseId);
+
+      await _firestore.runTransaction((transaction) async {
+        final snapshot = await transaction.get(docRef);
+        if (!snapshot.exists) {
+          throw Exception('Release $releaseId not found');
+        }
+
+        final data = snapshot.data() as Map<String, dynamic>;
+        final List<dynamic> subModules = List.from(data['sub_modules'] ?? []);
+
+        final index = subModules.indexWhere((m) => m['id'] == subModuleId);
+
+        if (index == -1) {
+          throw Exception(
+              'SubModule $subModuleId not found in release $releaseId');
+        }
+
+        // Update the specific sub-module's context
+        final modMap = Map<String, dynamic>.from(subModules[index] as Map);
+        modMap['ai_context'] = aiContext;
+        subModules[index] = modMap;
+
+        transaction.update(docRef, {'sub_modules': subModules});
+      });
+
+      debugPrint('Successfully updated context for $subModuleId in $releaseId');
+    } catch (e) {
+      debugPrint('Error updating submodule context: $e');
+      throw Exception('Failed to update context: $e');
+    }
+  }
 }

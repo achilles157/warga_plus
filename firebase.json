@@ -1,1 +1,38 @@
-{"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"wargaplus-a5153","configurations":{"web":"1:688758778888:web:3315a3961d9955c37d75bd","windows":"1:688758778888:web:b0a9da569f12d3367d75bd"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "wargaplus-a5153",
+          "configurations": {
+            "android": "1:688758778888:android:28bf5d61b31f24087d75bd",
+            "web": "1:688758778888:web:3315a3961d9955c37d75bd",
+            "windows": "1:688758778888:web:b0a9da569f12d3367d75bd"
+          }
+        }
+      },
+      "android": {
+        "default": {
+          "projectId": "wargaplus-a5153",
+          "appId": "1:688758778888:android:28bf5d61b31f24087d75bd",
+          "fileOutput": "android/app/google-services.json"
+        }
+      }
+    }
+  },
+  "hosting": {
+    "site": "wargaplus",
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

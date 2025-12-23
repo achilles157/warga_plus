@@ -1,6 +1,6 @@
 {
-    "name": "warga_plus",
-    "short_name": "warga_plus",
+    "name": "Warga+",
+    "short_name": "Warga+",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

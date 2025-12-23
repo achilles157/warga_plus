@@ -13,13 +13,24 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  bool _isPasswordVisible = false;
   bool _isLoading = false;
 
   void _login() async {
+    final email = _emailController.text.trim();
+    final password = _passwordController.text.trim();
+
+    if (email.isEmpty || password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Email dan Password tidak boleh kosong")),
+      );
+      return;
+    }
+
     setState(() => _isLoading = true);
     final error = await context.read<AuthService>().signInWithEmail(
-          _emailController.text.trim(),
-          _passwordController.text.trim(),
+          email,
+          password,
         );
     setState(() => _isLoading = false);
 
@@ -66,9 +77,23 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 16),
               TextField(
                 controller: _passwordController,
-                decoration: const InputDecoration(
-                    labelText: "Password", border: OutlineInputBorder()),
-                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: "Password",
+                  border: const OutlineInputBorder(),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _isPasswordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _isPasswordVisible = !_isPasswordVisible;
+                      });
+                    },
+                  ),
+                ),
+                obscureText: !_isPasswordVisible,
               ),
               const SizedBox(height: 24),
               if (_isLoading)
@@ -95,15 +120,6 @@ class _LoginPageState extends State<LoginPage> {
                   child: const Text("Belum punya akun? Daftar disini"),
                 ),
                 const SizedBox(height: 16),
-                TextButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/admin');
-                  },
-                  icon: const Icon(Icons.admin_panel_settings,
-                      color: Colors.grey),
-                  label: const Text("Admin Portal (Dev)",
-                      style: TextStyle(color: Colors.grey)),
-                ),
               ]
             ],
           ),

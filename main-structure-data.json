@@ -23,6 +23,7 @@
                 "history"
             ],
             "xp_reward": 30,
+            "ai_context": "Pada 1 Maret 1949, serangan dilakukan... Inisiator adalah Sultan HB IX... Soeharto pelaksana lapangan...",
             "chat_script": [
                 {
                     "role": "ai",
@@ -60,6 +61,7 @@
                 "law_policy"
             ],
             "xp_reward": 60,
+            "ai_context": "Supersemar memiliki 3 versi palsu di ANRI... Todongan senjata terhadap Soekarno...",
             "content": "Naskah asli Supersemar itu [HILANG]. Sampai hari ini, negara hanya menyimpan [TIGA] versi yang berbeda, dan semuanya dinyatakan tidak otentik oleh uji forensik lab Polri."
         }
     ]

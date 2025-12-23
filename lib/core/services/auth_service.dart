@@ -15,6 +15,8 @@ class AuthService extends ChangeNotifier {
 
   bool get isAuthenticated => _user != null;
 
+  bool get isAdmin => _user?.email == 'bungwarga@gmail.com';
+
   AuthService() {
     _auth.authStateChanges().listen((User? user) {
       _user = user;

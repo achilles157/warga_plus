@@ -36,7 +36,6 @@ migrate_working_dir/
 cacatwawasan.json
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
@@ -59,6 +58,8 @@ app.*.map.json
 wargaplus-a5153-firebase-adminsdk-*.json
 google-services.json
 GoogleService-Info.plist
+key.properties
+**/*.keystore
 
 # Windows thumb files
 Thumbs.db
@@ -68,3 +69,18 @@ $RECYCLE.BIN/
 
 # Mac
 __MACOSX/
+
+# Firebase
+.firebase/
+
+# Windows
+windows/flutter/ephemeral/
+windows/flutter/generated_plugin_registrant.cc
+
+# Linux
+linux/flutter/ephemeral/
+linux/flutter/generated_plugin_registrant.cc
+
+# Android
+android/build/
+android/.gradle/

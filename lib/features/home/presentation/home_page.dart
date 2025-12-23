@@ -5,7 +5,6 @@ import '../../../../core/services/auth_service.dart';
 import '../../../../core/services/content_service.dart';
 import '../../../../core/models/release_model.dart';
 import 'release_timeline_screen.dart';
-import '../../../../core/services/temp_seeder.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,9 +22,8 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     // Initialize immediately to prevent LateInitializationError
     // We chain the seeding process with the fetching process
-    _releasesFuture = TempSeeder.seed().then((_) {
-      return _contentService.getAllReleases();
-    });
+    // We don't want to seed every time anymore, as it overwrites manual updates.
+    _releasesFuture = _contentService.getAllReleases();
   }
 
   void _refresh() {
