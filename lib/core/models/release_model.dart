@@ -2,12 +2,14 @@ class Release {
   final String id;
   final String title;
   final String coverImage;
+  final List<String> tags;
   final List<SubModule> subModules;
 
   Release({
     required this.id,
     required this.title,
     required this.coverImage,
+    this.tags = const [],
     required this.subModules,
   });
 
@@ -16,6 +18,7 @@ class Release {
       id: json['release_id'] as String,
       title: json['title'] as String,
       coverImage: json['cover_image'] as String,
+      tags: (json['tags'] as List<dynamic>?)?.cast<String>() ?? [],
       subModules: (json['sub_modules'] as List<dynamic>)
           .map((e) => SubModule.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -27,6 +30,7 @@ class Release {
       'release_id': id,
       'title': title,
       'cover_image': coverImage,
+      'tags': tags,
       'sub_modules': subModules.map((e) => e.toJson()).toList(),
     };
   }

@@ -379,8 +379,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return 'assets/badges/earth_guardian_badge.png';
       case 'Underground Agent':
         return 'assets/badges/underground_agent_badge.png';
+      case 'The Strategist':
+        return 'assets/badges/badge_politics.png';
+      case 'The Scholar':
+        return 'assets/badges/badge_academic.png';
+      case 'The Statesman':
+        return 'assets/badges/badge_statesman.png';
       default:
-        return 'assets/badges/activist_badge.png';
+        return 'assets/badges/civilian_badge.png'; // Fallback to citizen instead of activist
     }
   }
 }

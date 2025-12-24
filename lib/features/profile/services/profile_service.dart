@@ -7,7 +7,7 @@ class ProfileService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // Logic from GelarKarakter.csv
+  // Logic from GelarKarakter.csv + New Tags
   final Map<String, String> _archetypes = {
     'history': 'The Timekeeper',
     'law_policy': 'The Lawmaker',
@@ -15,11 +15,11 @@ class ProfileService {
     'economy_oligarchy': 'Oligarch Hunter',
     'environment': 'Earth Guardian',
     'critical_thinking': 'Underground Agent',
+    'politics': 'The Strategist',
+    'academic': 'The Scholar',
   };
 
   final String _defaultArchetype = 'The Citizen';
-
-  // ... (Firestore Logic remains same) ...
 
   // Returns a stream of the user document for real-time UI
   Stream<DocumentSnapshot<Map<String, dynamic>>> getProfileStream() {
@@ -129,6 +129,26 @@ class ProfileService {
   String calculateArchetype(Map<String, dynamic>? tagScores) {
     if (tagScores == null || tagScores.isEmpty) return _defaultArchetype;
 
+    // 1. Check for "The Statesman" (Balanced / High Level across board)
+    final scores = tagScores.entries
+        .map((e) => MapEntry(e.key, e.value as int? ?? 0))
+        .where((e) => e.value > 0)
+        .toList();
+
+    scores.sort((a, b) => b.value.compareTo(a.value)); // Descending
+
+    if (scores.length >= 3) {
+      final top3 = scores.take(3).toList();
+      final maxScore = top3.first.value;
+      final minTop3 = top3.last.value;
+
+      // If the gap between 1st and 3rd is small (e.g., they are balanced like 5, 5, 4 or 6, 5, 5)
+      // AND they have some experience (maxScore > 2)
+      if (maxScore > 2 && (maxScore - minTop3) <= 1) {
+        return 'The Statesman';
+      }
+    }
+
     String dominator = '';
     int maxScore = 0;
 
@@ -160,6 +180,12 @@ class ProfileService {
         return "Bukan sekadar peduli plastik. Kamu paham krisis iklim adalah krisis politik.";
       case 'Underground Agent':
         return "Skeptis, tajam, dan berbahaya. Kamu selalu mempertanyakan 'Kebenaran' versi pemerintah.";
+      case 'The Strategist':
+        return "Catur politik adalah mainanmu. Kamu membaca langkah penguasa tiga langkah ke depan.";
+      case 'The Scholar':
+        return "Data adalah senjatamu. Analisismu tajam, berbasis bukti, dan tak tergoyahkan oleh hoax.";
+      case 'The Statesman':
+        return "Avatar-nya Warga Sipil. Menguasai semua elemen wawasan untuk membangun negara ideal.";
       case 'The Citizen':
         return "Warga negara yang baik. Mulai perjalananmu untuk menemukan peran aslimu di republik ini.";
       default:

@@ -81,9 +81,11 @@ class _ReleaseTimelineScreenState extends State<ReleaseTimelineScreen> {
                                         color: Colors.white
                                             .withValues(alpha: 0.5)),
                                   ),
-                                  child: const Text(
-                                    "SEJARAH KRITIS",
-                                    style: TextStyle(
+                                  child: Text(
+                                    widget.release.tags.isNotEmpty
+                                        ? _formatTag(widget.release.tags.first)
+                                        : "RELEASE",
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 10,
                                       fontWeight: FontWeight.bold,
@@ -228,6 +230,18 @@ class _ReleaseTimelineScreenState extends State<ReleaseTimelineScreen> {
         },
       ),
     );
+  }
+
+  String _formatTag(String tag) {
+    final Map<String, String> translations = {
+      'history': 'SEJARAH',
+      'politics': 'POLITIK',
+      'critical_thinking': 'BERPIKIR KRITIS',
+      'human_rights': 'HAM',
+      'economy': 'EKONOMI',
+      'law_policy': 'HUKUM',
+    };
+    return translations[tag] ?? tag.toUpperCase().replaceAll('_', ' ');
   }
 
   Widget _buildPlaceholder() {
