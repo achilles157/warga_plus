@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisCount: 2,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: 0.75, // Taller cards for covers
+              childAspectRatio: 0.92, // Shorter cards to fit 2x2 in viewport
             ),
             itemCount: releases.length,
             itemBuilder: (context, index) {

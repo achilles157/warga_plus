@@ -87,25 +87,44 @@ class _JsonImporterViewState extends State<JsonImporterView> {
     }
 
     // Check mandatory fields
-    final requiredFields = ['id', 'title', 'version', 'modules'];
+    final requiredFields = [
+      'release_id',
+      'title',
+      'cover_image',
+      'sub_modules'
+    ];
     for (var field in requiredFields) {
       if (!decoded.containsKey(field)) {
         throw "Missing required field: '$field'.";
       }
     }
 
-    // Check sub_modules existence (implied by content structure)
-    // We just check if 'modules' is list for preview summary
-    final modules = decoded['modules'] as List?;
+    // Check sub_modules
     final subModules = decoded['sub_modules'] as List?;
+
+    // Count Bubbles Recursively
+    int totalBubbles = 0;
+    List<String> details = [];
+
+    if (subModules != null) {
+      for (var item in subModules) {
+        if (item is Map<String, dynamic>) {
+          if (item['type'] == 'chat_stream' && item['chat_script'] is List) {
+            final count = (item['chat_script'] as List).length;
+            totalBubbles += count;
+            details.add("${item['id']}: $count bubbles");
+          }
+        }
+      }
+    }
 
     _passValidation(
         decoded,
         "Title: ${decoded['title']}\n"
-        "ID: ${decoded['id']}\n"
-        "Version: ${decoded['version']}\n"
-        "Modules: ${modules?.length ?? 0}\n"
-        "SubModules: ${subModules?.length ?? 0}");
+        "ID: ${decoded['release_id']}\n"
+        "SubModules: ${subModules?.length ?? 0}\n"
+        "Total Chat Bubbles: $totalBubbles\n"
+        "Details: ${details.take(3).join(', ')}${details.length > 3 ? '...' : ''}");
   }
 
   void _validateSubModuleSchema(dynamic decoded) {
@@ -123,12 +142,22 @@ class _JsonImporterViewState extends State<JsonImporterView> {
       throw "Target Release ID is required for SubModule import.";
     }
 
+    int totalBubbles = 0;
+    List<String> details = [];
+
     // Check items
     for (var item in items) {
       if (item is! Map<String, dynamic>) throw "Items must be Objects.";
       if (!item.containsKey('id')) throw "Item missing 'id'.";
       if (!item.containsKey('title')) {
         throw "Item '${item['id']}' missing 'title'.";
+      }
+
+      // Count Bubbles
+      if (item['type'] == 'chat_stream' && item['chat_script'] is List) {
+        final count = (item['chat_script'] as List).length;
+        totalBubbles += count;
+        details.add("${item['id']}: $count bubbles");
       }
     }
 
@@ -137,6 +166,8 @@ class _JsonImporterViewState extends State<JsonImporterView> {
         "Action: Add/Update SubModules\n"
         "Target Release: ${_targetReleaseIdController.text}\n"
         "Item Count: ${items.length}\n"
+        "Total Chat Bubbles: $totalBubbles\n"
+        "Details: ${details.take(3).join(', ')}${details.length > 3 ? '...' : ''}\n"
         "IDs: ${items.map((e) => e['id']).take(3).join(', ')}${items.length > 3 ? '...' : ''}");
   }
 

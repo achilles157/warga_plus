@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../../core/models/release_model.dart';
 import '../widgets/reader_widgets.dart';
+import '../widgets/live_chat_sheet.dart';
 import '../../profile/services/profile_service.dart';
 
 class RedactedDocScreen extends StatelessWidget {
@@ -107,6 +108,22 @@ class RedactedDocScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
           ),
         ).animate().scale(delay: 1200.ms, curve: Curves.elasticOut),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            builder: (context) => LiveChatSheet(
+              aiContext: subModule.aiContext ?? '',
+              releaseTitle: subModule.title,
+              moduleType: subModule.type,
+            ),
+          );
+        },
+        backgroundColor: Colors.indigo,
+        child: const Icon(Icons.psychology, color: Colors.white),
       ),
     );
   }

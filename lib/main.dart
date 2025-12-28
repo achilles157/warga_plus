@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
+import 'core/config/app_config.dart';
 import 'core/services/ai_service.dart';
 import 'core/services/auth_service.dart';
 import 'core/theme/app_theme.dart';
 import 'core/widgets/responsive_wrapper.dart';
 import 'features/auth/presentation/login_page.dart';
-import 'package:flutter/foundation.dart'; // For kReleaseMode
-import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart'; // For kDebugMode
 import 'features/main/screens/main_screen.dart';
 import 'features/admin/screens/admin_portal_screen.dart';
 
@@ -16,15 +16,27 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
+
+  // Try loading .env, but don't crash if it doesn't exist (production)
+  try {
+    await dotenv.load(fileName: ".env");
+    // Pass the env value to AppConfig for fallback
+    AppConfig.initFromEnv(dotenv.env['GROQ_API_KEY']);
+    if (kDebugMode) {
+      print('[AppConfig] Loaded .env successfully');
+    }
+  } catch (e) {
+    // .env not found - this is expected in production
+    if (kDebugMode) {
+      print('[AppConfig] .env not found, using --dart-define values');
+    }
+  }
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  // Disable DevicePreview in release mode so users get the real responsive web app
-  runApp(DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => const WargaPlusApp(),
-  ));
+
+  runApp(const WargaPlusApp());
 }
 
 class WargaPlusApp extends StatelessWidget {
@@ -42,10 +54,7 @@ class WargaPlusApp extends StatelessWidget {
         theme: AppTheme.lightTheme,
         // Wrap the builder to apply responsive constraints globally
         builder: (context, child) {
-          // DevicePreview builder first if enabled
-          var widget = DevicePreview.appBuilder(context, child);
-          // Then wrap with our responsive constraint
-          return ResponsiveWrapper(child: widget);
+          return ResponsiveWrapper(child: child!);
         },
         home: const AuthWrapper(),
         routes: {

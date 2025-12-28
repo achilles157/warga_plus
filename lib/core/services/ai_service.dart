@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart';
+import '../config/app_config.dart';
 
 class AiService {
   // Model Llama 3 8B (Ringan, Cepat, Gratis di Groq)
@@ -8,9 +8,9 @@ class AiService {
 
   Future<String> chatWithContext(
       String question, String contextText, String moduleType) async {
-    final apiKey = dotenv.env['GROQ_API_KEY'];
-    if (apiKey == null) {
-      return "Error: API Key Groq belum diset.";
+    final apiKey = AppConfig.groqApiKey;
+    if (apiKey == null || apiKey.isEmpty) {
+      return "Maaf AI nya belum di set nih.";
     }
 
     // 1. Validate Context

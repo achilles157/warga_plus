@@ -1,0 +1,587 @@
+{
+    "release_id": "sejarah_critical_01",
+    "title": "Cacat Wawasan: Sejarah yang Dipenjara",
+    "description": "Membongkar manipulasi historiografi, mitos Orde Baru, hingga akar oligarki yang disembunyikan dari kurikulum sekolah.",
+    "cover_image": "https://placehold.co/600x800/png?text=Sejarah+Kritis",
+    "author": "Tim Riset Warga+",
+    "created_at": "2024-05-20T10:00:00Z",
+    "tags": [
+        "history",
+        "politics",
+        "critical_thinking",
+        "human_rights"
+    ],
+    "total_xp": 500,
+    "sub_modules": [
+        {
+            "id": "sub_00_intro",
+            "title": "Intro: Sejarah Itu Senjata",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking",
+                "history"
+            ],
+            "xp_reward": 30,
+            "ai_context": "Pendidikan sejarah di Indonesia adalah medan pertempuran ideologis, bukan ruang hampa yang netral. Negara menggunakan sejarah untuk mengonstruksi identitas nasional seringkali dengan mengorbankan kebenaran faktual. Terjadi fenomena 'Cacat Wawasan' (Epistemic Blindness) yang melembaga dalam kurikulum dari Orde Baru hingga Kurikulum Merdeka. Hal ini menciptakan 'Ingatan yang Dipenjara', di mana narasi tunggal rezim otoriter bertahan melampaui masa hidup rezim itu sendiri. Pendidikan sejarah sering berfungsi sebagai alat legitimasi kekuasaan (legitimation of power) untuk menciptakan kepatuhan, bukan daya kritis. Aspek yang sering diabaikan meliputi peran sipil, perempuan, sejarah lokal non-Jawa, dan dimensi ekonomi-politik (oligarki).",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Halo Warga! 👋 Pernah ngerasa gak sih, pelajaran sejarah di sekolah itu kayak ada yang aneh? Kayak ada 'plot hole' di film?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Sering banget!",
+                        "Maksudnya gimana?",
+                        "Gak merhatiin"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Jujur aja, riset terbaru nunjukin kalau sejarah sekolah kita itu bukan 'ruang hampa' yang netral."
+                },
+                {
+                    "role": "ai",
+                    "text": "Sejarah di sini dipakai negara sebagai 'medan perang'. Tujuannya? Buat mengonstruksi ingatan kita supaya patuh sama penguasa. 🤐"
+                },
+                {
+                    "role": "ai",
+                    "text": "Ada istilah akademis yang ngeri nih: 'Epistemic Blindness' atau Cacat Wawasan."
+                },
+                {
+                    "role": "ai",
+                    "text": "Artinya: Kita sengaja 'dibutakan' dari fakta-fakta tertentu yang bisa bikin posisi negara terancam."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Contoh butanya dimana?",
+                        "Siapa yang bikin buta?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Banyak banget! Mulai dari peran sipil yang dikecilkan, perempuan yang ilang dari narasi, sampai oligarki ekonomi yang nggak pernah dibahas."
+                },
+                {
+                    "role": "ai",
+                    "text": "Contoh paling gampang ya Mitos Serangan Umum 1 Maret atau Supersemar. Narasi di buku sekolah itu seringkali 'Kebenaran Negara', bukan Kebenaran Faktual."
+                },
+                {
+                    "role": "ai",
+                    "text": "Akibatnya? Muncul fenomena 'Ingatan yang Dipenjara'. Kita susah move on dari narasi Orde Baru walaupun rezimnya udah lewat."
+                },
+                {
+                    "role": "ai",
+                    "text": "Gimana? Siap bongkar satu-satu mitos yang udah memenjara otak kita selama puluhan tahun ini? 🔥"
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Poin Kunci: Intro",
+                    "content": "- Sejarah sekolah = Alat Legitimasi Kekuasaan (bukan sekadar ilmu).\n- Cacat Wawasan = Kondisi sistematis dimana siswa dibuat buta terhadap fakta alternatif.\n- Dampak: Generasi yang rentan disinformasi dan merindukan otoritarianisme."
+                }
+            ]
+        },
+        {
+            "id": "sub_01_serangan_umum",
+            "title": "Mitos Sang Jenderal (1 Maret)",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "history",
+                "military"
+            ],
+            "xp_reward": 50,
+            "ai_context": "Buku teks sekolah lama dan film propaganda 'Janur Kuning' menarasikan Letkol Soeharto sebagai inisiator tunggal Serangan Umum 1 Maret 1949. Riset historiografi mutakhir membuktikan ini adalah manipulasi sejarah untuk kultus individu. Fakta sebenarnya: Inisiator gagasan adalah Sri Sultan Hamengku Buwono IX. Tujuannya adalah serangan diplomasi (show of force) kepada Dewan Keamanan PBB untuk mematahkan klaim Belanda bahwa TNI sudah bubar. Soeharto hanya berperan sebagai pelaksana lapangan di bawah mandat Jenderal Sudirman. Keppres No. 2 Tahun 2022 telah mengakui peran sentral Sultan HB IX, namun residu narasi Soeharto-sentris masih kuat di kalangan guru dan buku lama.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Kita mulai bedah kasus pertama: Serangan Umum 1 Maret 1949 di Jogja."
+                },
+                {
+                    "role": "ai",
+                    "text": "Coba inget-inget buku paket SD/SMP lo dulu, atau film wajib 'Janur Kuning'. Siapa tokoh utamanya? 🤔"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Soeharto dong",
+                        "Jenderal Sudirman",
+                        "Sultan HB IX"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Mayoritas pasti jawab Letkol Soeharto. Di film itu, dia digambarkan kayak Rambo. Sendirian, heroik, inisiator tunggal."
+                },
+                {
+                    "role": "ai",
+                    "text": "Nah, riset historiografi modern membuktikan: Itu MITOS yang dibangun buat kultus individu Orde Baru! 🚫"
+                },
+                {
+                    "role": "ai",
+                    "text": "Fakta aslinya: Inisiator ide serangan itu adalah Sri Sultan Hamengku Buwono IX."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Kenapa harus Sultan?",
+                        "Soeharto ngapain aja?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Jadi gini ceritanya. Sultan denger radio asing (BBC/ABC) kalau Belanda koar-koar di PBB bilang 'TNI udah bubar, Indonesia udah tamat'."
+                },
+                {
+                    "role": "ai",
+                    "text": "Sultan panas dong. Dia butuh cara buat ngebungkam mulut Belanda di dunia internasional."
+                },
+                {
+                    "role": "ai",
+                    "text": "Makanya, ini tuh sebenernya 'Serangan Diplomasi'. Tujuannya bukan menang perang militer (karena cuma nquasain Jogja 6 jam), tapi buat Show of Force ke Dewan Keamanan PBB."
+                },
+                {
+                    "role": "ai",
+                    "text": "Terus Soeharto? Dia itu pelaksana lapangan yang ditunjuk Jenderal Sudirman buat eksekusi idenya Sultan."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Jadi buku sekolah bohong?",
+                        "Pemerintah ngakuin gak?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Buku lama memanipulasi porsinya. Peran Sultan dikecilin, peran Soeharto digedein banget biar legitimasi dia sebagai Presiden makin kuat."
+                },
+                {
+                    "role": "ai",
+                    "text": "Untungnya, Keppres No. 2 Tahun 2022 akhirnya resmi mengakui peran sentral Sultan HB IX. Negara butuh waktu puluhan tahun buat jujur. 😅"
+                },
+                {
+                    "role": "ai",
+                    "text": "Pelajaran pentingnya: Jangan telen mentah-mentah sejarah yang tokohnya cuma satu orang doang."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Fakta vs Mitos 1 Maret",
+                    "content": "✅ Inisiator: Sri Sultan HB IX (Ide serangan diplomatik)\n✅ Restu: Jenderal Sudirman\n✅ Pelaksana: Letkol Soeharto\n❌ Mitos: Soeharto inisiator tunggal (Propaganda Film Janur Kuning)"
+                }
+            ]
+        },
+        {
+            "id": "sub_02_supersemar",
+            "title": "Dokumen Hantu: Supersemar",
+            "type": "redacted_doc",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "history",
+                "law_policy"
+            ],
+            "xp_reward": 60,
+            "ai_context": "Supersemar (Surat Perintah Sebelas Maret 1966) diajarkan sebagai instrumen legal pemulihan keamanan. Namun, terdapat cacat wawasan serius: 1) Naskah asli Supersemar dinyatakan hilang. 2) Terdapat 3 versi berbeda di Arsip Nasional yang dinyatakan tidak otentik oleh uji lab. 3) Konteks paksaan (dugaan todongan senjata oleh jenderal utusan terhadap Soekarno) disembunyikan. 4) Supersemar dimanipulasi dari alat pemulihan keamanan menjadi alat transfer kekuasaan (kudeta merangkak/creeping coup) untuk membubarkan PKI dan melanggengkan Orde Baru. Pendidikan sejarah menutupi ilegalitas proses ini demi narasi stabilitas.",
+            "content": "Surat Perintah Sebelas Maret (Supersemar) 1966 diajarkan di sekolah sebagai tonggak lahirnya Orde Baru demi memulihkan keamanan. Namun, validitas dokumen ini memiliki cacat fundamental yang jarang dibahas di kelas.\n\nFakta pertama yang paling meresahkan: Naskah asli Supersemar dinyatakan [HILANG]. Hingga hari ini, Arsip Nasional Republik Indonesia (ANRI) hanya menyimpan [TIGA] versi naskah yang berbeda satu sama lain, dan uji forensik Labfor Polri menyatakan ketiganya [TIDAK OTENTIK].\n\nKonteks keluarnya surat ini pun penuh manipulasi. Buku sejarah sekolah menutup mata terhadap fakta bahwa Presiden Soekarno kemungkinan besar menandatangani surat ini di bawah tekanan militer, bahkan ada kesaksian yang menyebutkan adanya todongan [SENJATA] oleh jenderal utusan Soeharto.\n\nLebih parah lagi, mandat Supersemar sejatinya hanyalah perintah administratif untuk memulihkan keamanan (kamtibmas), BUKAN transfer kekuasaan kepresidenan. Namun, Jenderal Soeharto menggunakan surat 'sakti' ini sebagai alat [KUDETA MERANGKAK] (creeping coup) untuk membubarkan PKI, menangkap menteri-menteri loyalis Soekarno, dan akhirnya menggulingkan Presiden yang sah secara inkonstitusional.\n\nGenerasi kita diajarkan untuk memuja stabilitas hasil Supersemar, namun dipaksa buta terhadap ilegalitas proses di baliknya."
+        },
+        {
+            "id": "sub_03_tragedi_1965",
+            "title": "Luka 1965 & Hantu Komunisme",
+            "type": "chat_stream",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "human_rights",
+                "history"
+            ],
+            "xp_reward": 70,
+            "ai_context": "Narasi sejarah sekolah didominasi oleh versi tunggal Orde Baru bahwa PKI adalah dalang tunggal (G30S/PKI). Buku teks fokus pada pembunuhan 6 Jenderal di Jakarta, namun melakukan 'amnesia selektif' terhadap pembantaian massal ratusan ribu hingga jutaan warga sipil (petani, guru, seniman) yang dituduh komunis di Jawa dan Bali pasca kejadian tersebut. Teori alternatif seperti konflik internal Angkatan Darat (Dewan Jenderal) atau keterlibatan asing (CIA) jarang dibahas. Guru sejarah mengalami ketakutan (self-censorship) mengajarkan topik ini secara kritis karena stigma 'kiri' atau 'komunis' yang masih dipelihara.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Oke, tarik napas dulu. Kita masuk ke topik paling gelap dan paling sensitif di republik ini: 1965."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "G30S/PKI maksudnya?",
+                        "Kenapa dibilang sensitif?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Perhatiin deh, lo nyebutnya 'G30S/PKI' kan? Pake embel-embel '/PKI' di belakangnya."
+                },
+                {
+                    "role": "ai",
+                    "text": "Itu adalah konstruksi bahasa Orde Baru buat nanemin doktrin kalau pelakunya TUNGGAL: cuma PKI. Gak ada yang lain."
+                },
+                {
+                    "role": "ai",
+                    "text": "Padahal di Kurikulum 2004, kata '/PKI' itu sempet dihapus lho, tapi diprotes keras sama kelompok konservatif dan militer, akhirnya balik lagi deh."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Emang pelakunya bukan PKI?",
+                        "Terus siapa lagi?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Riset akademis sebenernya punya banyak versi. Ada keterlibatan konflik internal Angkatan Darat (Dewan Jenderal), ada peran CIA (Amerika), dan ada peran Soeharto juga."
+                },
+                {
+                    "role": "ai",
+                    "text": "Masalahnya, buku sekolah kita cuma fokus bahas pembunuhan 6 Jenderal di Jakarta (Lubang Buaya). Dramatis banget."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi buku itu 'LUPA' bahas apa yang terjadi setelahnya: Pembantaian massal ratusan ribu (ada yang bilang jutaan) orang yang DITUDUH komunis di Jawa & Bali."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Jutaan orang?!",
+                        "Kok gak pernah diajarin?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Yap. Petani, guru, seniman, yang gak tau apa-apa ditangkep, dibuang ke Pulau Buru, atau dieksekusi tanpa pengadilan."
+                },
+                {
+                    "role": "ai",
+                    "text": "Guru sejarah di sekolah sering takut bahas ini. Takut dicap 'kiri' atau 'antek komunis'. Akhirnya kita mewarisi ketakutan itu tanpa tau konteks aslinya."
+                },
+                {
+                    "role": "ai",
+                    "text": "Inilah yang disebut 'Amnesia Selektif'. Kita disuruh inget jenderalnya, tapi disuruh lupa sama pembantaian rakyatnya."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Sisi Gelap 1965",
+                    "content": "- Narasi Tunggal: PKI dijadikan satu-satunya kambing hitam.\n- Fakta yang Hilang: Pembantaian massal warga sipil pasca-G30S & Peran konflik internal AD/Asing.\n- Dampak: Stigma turunan dan ketakutan guru sejarah untuk bersikap kritis."
+                }
+            ]
+        },
+        {
+            "id": "sub_04_oligarki",
+            "title": "Oligarki & Mitos Swasembada",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "economy_oligarchy",
+                "environment"
+            ],
+            "xp_reward": 60,
+            "ai_context": "Pendidikan sejarah mengalami cacat wawasan struktural dalam ekonomi-politik. Narasi 'Swasembada Beras 1984' dan penghargaan FAO diajarkan sebagai prestasi, menutupi dampak buruk Revolusi Hijau (kerusakan tanah, ketergantungan pupuk kimia, penghancuran pertanian organik). Kurikulum tidak mengajarkan sejarah penguasaan Sumber Daya Alam (Sawit & Batubara) oleh segelintir elit/oligarki melalui pembagian izin usaha sebagai patronase politik sejak era Orde Baru. Hal ini menyebabkan siswa buta terhadap akar ketimpangan ekonomi, konflik agraria, dan kerusakan lingkungan hari ini. Model ekonomi kerakyatan (Koperasi) yang sukses seringkali dipinggirkan oleh narasi korporasi besar.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Bosen bahas perang? Kita bahas duit dan perut. 🍚"
+                },
+                {
+                    "role": "ai",
+                    "text": "Lo pasti pernah diajarin kalau Orde Baru itu sukses besar bikin Indonesia 'Swasembada Beras' tahun 80-an, sampe dapet penghargaan FAO?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Iya, sering dibanggain",
+                        "Katanya Gemah Ripah?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Itu satu sisi koin. Sisi lainnya? Cacat wawasan ekonomi yang parah."
+                },
+                {
+                    "role": "ai",
+                    "text": "Sekolah gak ngajarin 'biaya mahal' di balik swasembada itu: Revolusi Hijau yang maksa petani pake pupuk kimia, bibit impor, dan ancurin sistem pertanian organik lokal."
+                },
+                {
+                    "role": "ai",
+                    "text": "Lebih parah lagi, sejarah kita gak pernah bahas akar OLIGARKI."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Oligarki itu apa sih?",
+                        "Apa hubungannya sama sejarah?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Simpelnya: Kekayaan negara dikuasai segelintir orang yang deket sama penguasa. Ini warisan Orba banget."
+                },
+                {
+                    "role": "ai",
+                    "text": "Coba cek siapa yang punya jutaan hektar lahan sawit dan tambang batubara sekarang? Nama-nama perusahaannya seringkali berakar dari izin-izin yang dibagi-bagi zaman dulu."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi di buku sejarah, mereka gak disebut. Yang disebut cuma 'Pembangunan Ekonomi'. Padahal dampaknya: kerusakan lingkungan, konflik lahan, dan masyarakat adat yang tergusur."
+                },
+                {
+                    "role": "ai",
+                    "text": "Kita diajarin bangga sama 'Kekayaan Alam', tapi gak diajarin siapa yang sebenernya menikmati kekayaan itu. Ironis kan?"
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Ekonomi Politik yang Hilang",
+                    "content": "- Mitos Swasembada: Mengabaikan kerusakan ekologis & ketergantungan petani.\n- Oligarki: Penguasaan SDA (Sawit/Tambang) oleh kroni penguasa.\n- Cacat Wawasan: Sejarah ekonomi hanya bahas 'angka pertumbuhan', bukan 'pemerataan'."
+                }
+            ]
+        },
+        {
+            "id": "sub_05_papua",
+            "title": "Papua: Integrasi atau Luka?",
+            "type": "redacted_doc",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "human_rights",
+                "history"
+            ],
+            "xp_reward": 80,
+            "ai_context": "Sejarah Papua dalam buku teks berhenti pada Penentuan Pendapat Rakyat (PEPERA) 1969 yang dianggap final dan sah. Realitas sejarah yang disensor adalah: PEPERA 1969 penuh manipulasi karena tidak menggunakan sistem 'One Man One Vote' sesuai standar internasional, melainkan sistem musyawarah perwakilan (1025 orang) yang dikarantina dan diintimidasi militer (Operasi Wibawa). Siswa tidak diajarkan perspektif orang Papua mengenai sejarah integrasi ini. Konflik Papua saat ini sering disederhanakan sebagai ulah KKB, padahal berakar dari ketidakadilan sejarah, rasisme sistemik, dan eksploitasi SDA (Freeport).",
+            "content": "Sejarah Papua (Irian Barat) dalam buku teks sekolah selalu berhenti pada tahun 1969 dengan satu kesimpulan final: 'Kembali ke Pangkuan Ibu Pertiwi' melalui Penentuan Pendapat Rakyat (PEPERA).\n\nNamun, narasi 'final' ini menyembunyikan realitas [MANIPULASI] yang terjadi di lapangan. Pepera 1969 tidak dilakukan dengan sistem 'satu orang satu suara' (one man one vote) sesuai standar internasional, melainkan melalui sistem [MUSYAWARAH] perwakilan yang pesertanya telah dipilih dan dikarantina oleh militer Indonesia.\n\nBanyak dokumen sejarah alternatif mencatat adanya intimidasi dan operasi [MILITER] untuk memastikan hasil mutlak pro-integrasi. Siswa di Jawa tidak pernah diajarkan perspektif orang Papua yang melihat proses ini sebagai pencideraan hak menentukan nasib sendiri.\n\nHingga hari ini, konflik di Papua sering disederhanakan sebagai ulah 'Kelompok Kriminal', menutup mata terhadap akar masalah historis: Rasisme sistemik, eksploitasi SDA (seperti Freeport), dan memori kolektif tentang Pepera yang dianggap [CACAT HUKUM]. Tanpa memahami luka sejarah ini, integrasi nasional hanyalah paksaan di atas kertas."
+        },
+        {
+            "id": "sub_06_p5",
+            "title": "P5 & Disiplin Tubuh: Sekolah atau Barak?",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "critical_thinking",
+                "law_policy"
+            ],
+            "xp_reward": 50,
+            "ai_context": "Analisis kritis menggunakan teori Michel Foucault terhadap program Profil Pelajar Pancasila (P5) dan pendidikan karakter. Program ini berpotensi menjadi alat pendisiplinan tubuh (docile bodies) melalui mekanisme Panoptikon (pengawasan terus menerus). Dalam praktiknya, P5 sering terjebak pada ritualisme (baris-berbaris, seragam, upacara) yang menekankan kepatuhan (obedience) pada aturan negara, alih-alih membangun nalar kritis substantif atau pembebasan intelektual. Sekolah berisiko menjadi pabrik kepatuhan yang mematikan keragaman individu.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Sekarang kita bahas yang lagi hits: Kurikulum Merdeka & Profil Pelajar Pancasila (P5). Katanya sih 'Merdeka', tapi beneran bebas?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Seru sih, banyak projek",
+                        "Malah ribet",
+                        "Biasa aja"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Banyak yang ngerasa P5 itu positif. Tapi kalau dibedah pake teori Michel Foucault, ada sisi gelapnya: Pendisiplinan Tubuh (Docile Bodies)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Coba perhatiin, P5 di sekolah seringnya ngapain? Baris-berbaris? Upacara? Pakai baju adat seragam?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Iya, sering banget baris",
+                        "Lha emang kenapa?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Itu bukan nalar kritis, bro. Itu kepatuhan (obedience). Sekolah jadi mirip barak militer atau pabrik. Yang dinilai bukan 'gimana cara lo mikir', tapi 'seberapa patuh lo sama aturan'."
+                },
+                {
+                    "role": "ai",
+                    "text": "Alih-alih bikin lo kritis sama masalah sosial, P5 berisiko jadi alat kontrol baru biar lo jadi warga negara yang 'manut' dan seragam."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Kritik Pedagogis P5",
+                    "content": "- Potensi: Menjadi alat pendisiplinan (Panoptikon) daripada pembebasan.\n- Realita: Sering terjebak ritualisme (baris-berbaris/seragam).\n- Bahaya: Mencetak 'Docile Bodies' (Tubuh yang patuh), bukan pemikir merdeka."
+                }
+            ]
+        },
+        {
+            "id": "sub_07_digital",
+            "title": "Sejarah TikTok & Nostalgia Orba",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking",
+                "history"
+            ],
+            "xp_reward": 40,
+            "ai_context": "Di era digital, monopoli sejarah sekolah runtuh oleh media sosial (TikTok). Muncul fenomena pendangkalan makna di mana sejarah kompleks dipotong menjadi klip 60 detik tanpa konteks. Bahaya terbesar adalah munculnya nostalgia ahistoris di kalangan Gen Z terhadap Orde Baru (Meme 'Piye Kabare, Enak Jamanku To?'). Visualisasi estetik 'Bapak Pembangunan' di media sosial menutupi fakta represif penculikan aktivis, pembredelan media, dan korupsi yayasan Cendana. Ini menandakan kegagalan pendidikan sejarah menanamkan memori kolektif tentang bahaya otoritarianisme.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Terakhir nih. Lo pasti sering liat konten sejarah seliweran di TikTok/Reels kan? 📱"
+                },
+                {
+                    "role": "ai",
+                    "text": "Apalagi meme Pak Harto senyum sambil bilang: 'Piye Kabare? Enak Jamanku To?'"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Sering liat!",
+                        "Keren sih editannya"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Hati-hati, Warga! Itu yang disebut 'Nostalgia Ahistoris'. Kangen sama masa lalu yang sebenernya gak pernah ada."
+                },
+                {
+                    "role": "ai",
+                    "text": "Di TikTok, sejarah dipotong jadi 60 detik. Konteks ilang. Yang sisa cuma estetika 'Bapak Pembangunan' yang gagah."
+                },
+                {
+                    "role": "ai",
+                    "text": "Padahal di balik senyum itu, ada aktivis yang diculik, koran dibredel, dan korupsi yayasan Cendana."
+                },
+                {
+                    "role": "ai",
+                    "text": "Jangan sampe kita jadi generasi yang 'buta sejarah' cuma gara-gara filter estetik TikTok, oke?"
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Bahaya Sejarah Digital",
+                    "content": "- Pendangkalan Makna: Sejarah kompleks dipotong jadi klip 60 detik.\n- Nostalgia Palsu: Romantisme era Orba ('Enak Jamanku') tanpa memahami sisi represifnya.\n- Solusi: Verifikasi sumber, jangan cuma percaya Influencer."
+                }
+            ]
+        },
+        {
+            "id": "sub_08_outro",
+            "title": "Kesimpulan & Refleksi",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking"
+            ],
+            "xp_reward": 100,
+            "ai_context": "Kesimpulan riset: Cacat wawasan dalam pendidikan sejarah Indonesia adalah hasil desain politik sistematis untuk melanggengkan kekuasaan. Siswa dibutakan dari fakta peran sipil, kekerasan negara, dan struktur oligarki. Solusinya adalah mengubah paradigma dari transfer doktrin menjadi pengembangan berpikir historis (historical thinking). Diperlukan keberanian guru untuk mengajarkan topik kontroversial, inklusi sejarah yang dipinggirkan, dan literasi digital kritis untuk melawan manipulasi informasi.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Perjalanan panjang ya? Dari Serangan Umum, Supersemar, G30S, Oligarki, sampai TikTok. 🤯"
+                },
+                {
+                    "role": "ai",
+                    "text": "Intinya satu: Sejarah yang lo dapet di sekolah itu 'Cacat Wawasan'. Bukan karena guru lo jahat, tapi karena sistemnya didesain buat melanggengkan kekuasaan."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Terus gue harus apa?",
+                        "Jadi hopeless nih"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Jangan hopeless! Justru karena lo udah tau, lo sekarang punya senjata: 'Critical Thinking'."
+                },
+                {
+                    "role": "ai",
+                    "text": "Jangan jadi 'robot ceria' yang teknisnya pinter tapi buta sejarah. Jadilah Warga yang berani nanya: 'Bener gak sih?'"
+                },
+                {
+                    "role": "ai",
+                    "text": "Sekarang, gue mau denger suara lo. Tulis satu kalimat refleksi lo di bawah ini. Apa mitos terbesar yang baru aja lo sadari?"
+                },
+                {
+                    "role": "journal_input",
+                    "prompt": "Tulis refleksimu (misal: aku baru sadar kalau...)",
+                    "save_to_profile": true
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Misi Selesai: Agen Bawah Tanah",
+                    "content": "Selamat! Kamu telah menyelesaikan modul 'Cacat Wawasan'.\nIdentitas barumu: SEJARAHWAN KRITIS.\nJangan simpan ilmu ini sendiri, sebarkan ke temanmu!"
+                }
+            ]
+        },
+        {
+            "id": "sub_09_bibliography",
+            "title": "Daftar Pustaka & Sumber Valid",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking",
+                "academic"
+            ],
+            "xp_reward": 20,
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Transparansi adalah kunci. Warga Plus tidak menyebarkan rumor, kami menyebarkan riset."
+                },
+                {
+                    "role": "ai",
+                    "text": "Berikut adalah daftar lengkap semua jurnal, buku, berita, dan laporan resmi yang menjadi landasan Rilisan ini. Silakan verifikasi sendiri jika ragu. 🧐"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "1. Serangan Umum 1 Maret & Supersemar",
+                    "content": "• Kontroversi Serangan Umum 1 Maret 1949 (Kompasiana/Google Books)\n• Serangan Umum 1 Maret 1949 (Polkam.go.id & Wikipedia)\n• Ramai soal Keppres & Peran Soeharto (Detik.com)\n• Supersemar: Latar Belakang & Dampak (Gramedia Literasi)\n• Naskah & Makalah SUPERSEMAR (Scribd)\n• Supersemar: Sejarah, Dampak, Kontroversi (Pasca Unair)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "2. Kurikulum & Politik Historiografi",
+                    "content": "• Perbandingan Sejarah K13 vs Kurikulum Merdeka (Jurnal UPI)\n• Dominasi Orang Besar dalam Sejarah (Jurnal Undip)\n• Dua Era, Dua Gaya: Soekarno vs Soeharto (Teropong Senayan)\n• Pancasila: Ideologi Negara dalam Pendidikan (Jurnal UMJ)\n• Era Orde Baru: Demokrasi Rasa Otokrasi (Neliti)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Masih kuat nge-scroll? Kita lanjut ke sumber-sumber soal Tragedi 65 dan dilema para guru sejarah."
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "3. Tragedi 1965 & Gen Z",
+                    "content": "• Upaya Gen Z Pahami Sejarah 1965 (Pikiran Rakyat)\n• Persepsi Gen Z terhadap Golput (Jurnal UNS)\n• Apa yang Gen Z Pahami Soal Reformasi? (Tirto.id)\n• Larangan Buku Sejarah 2004 & Pencabutan Kata PKI (Detik/Tempo)\n• Comparative Analysis of G30S Materials (Nindiati)\n• Critical Discourse Analysis of G30S Representations (TPLS)\n• Teachers' Narratives on Teaching 1965 (Taylor & Francis)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "4. Kendala Guru & Isu Kontroversial",
+                    "content": "• Peristiwa G30S Sebagai Isu Kontroversi (Scribd)\n• UKBM Sejarah Indonesia XII (Scribd)\n• Konstruksi Materi Sejarah Kontroversial Era Post-Truth (ResearchGate)\n• Respon Guru Sejarah terhadap Wacana 1965 (ResearchGate)\n• Kendala Guru dalam Pembelajaran Sejarah Kontroversial (Jurnal UINSU/UPI/DiVA Portal)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Sekarang masuk ke bagian 'Dapur' negara: Ekonomi, Beras, dan Oligarki Tambang. Data ini yang paling sering bikin kaget."
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "5. Ekonomi Politik & Oligarki",
+                    "content": "• Peta Beras Indonesia & Stok Tertahan (CNBC Indonesia)\n• Untung Tengkulak dari Rantai Distribusi Beras (DetikFinance)\n• Daftar 19 Saham Batu Bara di BEI (Stockbit)\n• 10 Perusahaan Batubara Aset Terbesar (Indonesian Coal & Nickel)\n• 10 Emiten Terbesar RI & Tambang Salim (CNBC)\n• Saham Emiten Salim & Bakrie Melonjak (Kompas Money)\n• Kampanye Negatif Kelapa Sawit (Setneg/BPDP)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "6. Koperasi & Ekonomi Kerakyatan",
+                    "content": "• Skema Pre-Financing Kopontren Al-Ittifaq (TrijayaNews/SindoNews)\n• Agro Bisnis Al-Ittifaq & Rantai Pasok MBG (BeritaKoperasi)\n• Tantangan Credit Union (UI Scholars Hub)\n• Koperasi Warga Semen Gresik: Omzet Triliunan & Pabrik (Kompas/Antara/Kontan)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "7. Papua & Hak Lingkungan",
+                    "content": "• Integrasi Timor-Timur (Scribd)\n• Penyelesaian Konflik Papua Perspektif Strategis (Jurnal Unpad)\n• Akar Konflik & Kebijakan Damai Papua (UI Scholars Hub)\n• Pembangunan, Marginalisasi, Disintegrasi Papua (Yayasan Tifa)\n• Pendidikan Wawasan Kebangsaan Siswa ADEM Papua (Kemendikdasmen)\n• Citizen Lawsuit: Air Pollution & Environment (Unand/ResearchGate/JatimProv/ICEL)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Terakhir, ini referensi soal P5 yang katanya 'mendisiplinkan tubuh' dan kondisi hak digital kita hari ini."
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "8. Pedagogi Kritis & P5",
+                    "content": "• Sekolah dan Industri Kepatuhan: Disiplin Foucault (Indonesiana)\n• Effectiveness of P5 Program (ResearchGate)\n• Analisis Profil Pelajar Pancasila & Disiplin Diri (ResearchGate/Jurnal PGSD UNIGA)\n• Pengetahuan dan Kekuasaan Michel Foucault (Stitdarulhijrah)\n• Pedagogi Shalom & Critical Pedagogy Henry Giroux (CORE/Jurnal Obsesi)\n• Pancasila: Pendidikan vs Indoktrinasi (Sindonews/ResearchGate)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "9. Hak Digital & Media Sosial",
+                    "content": "• Civic Tech & Transparansi APBD (WorldBank/PusatDiklat)\n• Ekosistem Civic Tech & Data Pemilu (The Indonesian Institute)\n• Efektivitas Sirekap & Aplikasi Pemilu 2024 (Sejurnal/VOA)\n• Digital Rights Situation Report 2024 (SAFEnet/Jubi Papua)\n• Riset Keamanan Digital Pembuat Konten (AJI)\n• Dampak Distorsi Sejarah di Video/TikTok (UPI/ISI DPS/ResearchGate)\n• Influencer Mengalahkan Pakar? (Tempo)\n• Miskinkan Koruptor Lewat Illicit Enrichment (ICW)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Panjang banget kan? Itu bukti kalau kita gak asal ngomong. Semua ada datanya. Jangan lupa share ke temen lo yang masih buta sejarah! 👋"
+                }
+            ]
+        }
+    ]
+}

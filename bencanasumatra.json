@@ -1,0 +1,500 @@
+{
+    "release_id": "ekologi_bencana_sumatera",
+    "title": "Ekologi Bencana: Jejak Oligarki di Sumatera",
+    "description": "Investigasi forensik di balik banjir bandang Sumatera 2025. Mengungkap fenomena 'Kayu Bernomor' dan kegagalan tata kelola lahan.",
+    "cover_image": "https://placehold.co/600x800/png?text=Bencana+Sumatera",
+    "author": "Tim Riset Warga+",
+    "created_at": "2025-12-24T10:00:00Z",
+    "tags": [
+        "environment",
+        "economy_oligarchy",
+        "politics",
+        "critical_thinking"
+    ],
+    "total_xp": 450,
+    "sub_modules": [
+        {
+            "id": "sub_01_intro_bencana",
+            "title": "Intro: Bencana atau Kejahatan?",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "environment",
+                "critical_thinking"
+            ],
+            "xp_reward": 40,
+            "ai_context": "Laporan investigasi ini mengungkap bahwa banjir bandang yang melanda Aceh, Sumatera Utara, dan Sumatera Barat pada akhir 2025, yang menewaskan lebih dari 900 jiwa, bukanlah sekadar bencana alam akibat anomali cuaca atau siklon tropis. Temuan kunci di lapangan menunjukkan adanya 'Corpus Delicti' (bukti tubuh kejahatan) berupa gelondongan kayu bernomor (numbered logs) yang hanyut bersama material banjir. Kayu-kayu ini memiliki ciri potongan mekanis yang rapi menggunakan gergaji mesin dan ditandai dengan cat merah register industri. Bukti fisik ini mematahkan narasi pemerintah bahwa banjir disebabkan oleh peladangan liar warga. Sebaliknya, ini mengindikasikan adanya aktivitas pembukaan lahan berskala industri (penebangan legal maupun ilegal yang terorganisir) di hulu Daerah Aliran Sungai (DAS) yang seharusnya menjadi zona tangkapan air yang utuh. Bencana ini didefinisikan sebagai Kejahatan Ekologis.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Halo Warga! Masih inget gak berita akhir tahun 2025 kemarin? Banjir bandang gila-gilaan di Aceh, Sumut, sama Sumbar. 🌊"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Iya, parah banget",
+                        "Lupa, emang kenapa?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Bencana itu makan korban lebih dari 900 nyawa lho. Media bilang ini karena 'Cuaca Ekstrem' atau Siklon Tropis."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi... tim investigasi nemuin sesuatu yang aneh banget di lokasi bencana. Sesuatu yang bikin narasi 'Bencana Alam' jadi meragukan."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Nemu apaan?",
+                        "Pasti ulah manusia?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Mereka nemuin 'Gelondongan Kayu Bernomor' di antara puing-puing banjir. 🪵"
+                },
+                {
+                    "role": "ai",
+                    "text": "Kayunya ada cat merahnya, potongannya rapi pake gergaji mesin. Bukan kayu yang patah kena badai."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini bukti forensik (Corpus Delicti) kalau di hulu sungai itu ada aktivitas penebangan industri, bukan hutan lindung yang utuh!"
+                },
+                {
+                    "role": "ai",
+                    "text": "Jadi, banjir ini sebenernya 'Bencana Buatan' akibat kegagalan tata kelola lahan yang parah banget."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Siapa pelakunya?",
+                        "Kok bisa ada kayu industri?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Nah, itu yang bakal kita bongkar di modul ini. Kita bakal telusuri siapa yang punya izin di hulu sungai itu."
+                },
+                {
+                    "role": "ai",
+                    "text": "Siap jadi detektif lingkungan? Yuk kita ke TKP! 🕵️‍♂️"
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Temuan Awal Investigasi",
+                    "content": "- Korban: 900+ jiwa (Aceh, Sumut, Sumbar).\n- Bukti Fisik: Kayu gelondongan dengan nomor seri & cat merah.\n- Indikasi: Pembukaan lahan industri di hulu DAS (Daerah Aliran Sungai)."
+                }
+            ]
+        },
+        {
+            "id": "sub_02_jejak_oligarki",
+            "title": "Jejak Korporasi di Hulu Sungai",
+            "type": "chat_stream",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "economy_oligarchy",
+                "environment",
+                "politics"
+            ],
+            "xp_reward": 60,
+            "ai_context": "Analisis spasial satelit menyingkap korelasi langsung antara titik-titik awal banjir bandang dengan lokasi konsesi korporasi besar di sepanjang Bukit Barisan. Di Sumatera Utara, sorotan utama tertuju pada operasi tambang emas PT Agincourt Resources (Martabe) dan proyek energi PLTA Batang Toru yang beroperasi di ekosistem sensitif. Di sektor perkebunan, ekspansi Hutan Tanaman Industri (HTI) dan perkebunan sawit monokultur (seperti Socfindo dan grup besar lainnya) telah mengubah bentang alam secara drastis. Pembukaan hutan untuk akses jalan tambang dan konversi hutan alam menjadi tanaman industri mengurangi kapasitas tanah menahan air secara signifikan. Fenomena ini disebut sebagai 'Ecological Amnesia', di mana keputusan politik dan korporasi secara sadar mengabaikan batas toleransi ekologis demi mengejar target ekstraksi sumber daya alam, menjadikan warga di hilir sebagai korban tumbal pembangunan.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Oke, kita lanjut. Kalau ada kayu industri hanyut, berarti ada yang nebang di atas sana kan?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Data satelit nunjukin korelasi ngeri antara titik banjir sama lokasi konsesi perusahaan raksasa."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Perusahaan apa aja?",
+                        "Tambang atau sawit?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Ada macem-macem. Di Sumatera Utara misalnya, ada operasi tambang emas raksasa (PT AR) dan proyek energi (PLTA Batang Toru)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ironisnya, proyek PLTA itu sering dilabeli 'Energi Hijau' atau ramah lingkungan. Tapi faktanya?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Pembangunannya ngebuka hutan di ekosistem Batang Toru yang super rapuh. Tanah jadi labil, hutan penyerap air ilang."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Terus pemerintah diem aja?",
+                        "Katanya demi listrik?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Pemerintah sering pake alibi 'Pembangunan' dan 'Investasi'. Keselamatan ekologis jadi prioritas nomor sekian."
+                },
+                {
+                    "role": "ai",
+                    "text": "Selain tambang & energi, ada juga ekspansi Hutan Tanaman Industri (HTI) kayak Toba Pulp Lestari."
+                },
+                {
+                    "role": "ai",
+                    "text": "Mereka nanem Eukaliptus, tapi nebang hutan alam dulu. Akibatnya? Daya serap tanah anjlok."
+                },
+                {
+                    "role": "ai",
+                    "text": "Pas ujan deres dateng (yang emang udah diprediksi BMKG), airnya langsung meluncur ke desa di bawah. Gak ada lagi pohon yang nahan."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Jahat banget sih",
+                        "Berarti bukan takdir tuhan ya?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Bencana hidrometeorologi emang ada faktor alamnya. Tapi, dampak yang mematikan ini adalah hasil keputusan politik."
+                },
+                {
+                    "role": "ai",
+                    "text": "Keputusan buat ngasih izin di zona merah, keputusan buat ngubah status Hutan Lindung jadi APL (Area Penggunaan Lain)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini yang disebut 'Ecological Amnesia'. Kita dipaksa lupa kalau alam punya batas, demi ngejar target ekonomi jangka pendek."
+                },
+                {
+                    "role": "ai",
+                    "text": "Dan yang paling sedih, kayu-kayu 'bernomor' tadi itu bukti kalau alam udah dieksploitasi secara sistematis sebelum bencana dateng."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Aktor di Balik Bencana",
+                    "content": "- Tambang Emas & PLTA: Operasi di ekosistem sensitif (Batang Toru).\n- HTI (Pulp & Paper): Konversi hutan alam ke monokultur mengurangi serapan air.\n- Greenwashing: Label 'Energi Hijau' sering menutupi deforestasi di lapangan."
+                }
+            ]
+        },
+        {
+            "id": "sub_03_dokumen_tata_kelola",
+            "title": "Dokumen Merah: Kegagalan Tata Kelola",
+            "type": "redacted_doc",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "politics",
+                "law_policy"
+            ],
+            "xp_reward": 80,
+            "ai_context": "Bencana ini adalah manifestasi dari kegagalan sistemik tata kelola lanskap yang disengaja. Investigasi terhadap dokumen Rencana Tata Ruang Wilayah (RTRW) di Aceh dan Sumut menunjukkan pola 'Pemutihan' pelanggaran tata ruang. Kawasan yang secara fungsi hidrologis wajib menjadi Hutan Lindung atau zona tangkapan air, secara legal diubah statusnya menjadi Areal Penggunaan Lain (APL) melalui revisi Perda yang tidak transparan demi mengakomodasi kepentingan investasi tambang dan sawit. Revisi UU Cipta Kerja memperparah situasi ini dengan mempermudah perizinan di kawasan hutan (kawasan strategis) dan melemahkan peran Analisis Mengenai Dampak Lingkungan (AMDAL). Negara gagal melindungi keselamatan publik dengan membiarkan deforestasi terjadi secara legal administratif. Kayu bernomor yang hanyut adalah bukti nyata bahwa aktivitas ekstraktif tersebut dilakukan secara masif dan terencana di hulu sungai.",
+            "content": "Bencana banjir bandang Sumatera 2025 bukanlah kejadian acak atau 'takdir alam' semata, melainkan hasil akhir dari [KEGAGALAN SISTEMIK] yang disengaja dalam tata kelola lanskap. Analisis mendalam terhadap dokumen Rencana Tata Ruang Wilayah (RTRW) Provinsi Sumatera Utara dan Aceh menunjukkan adanya pola sistematis [PEMUTIHAN] pelanggaran tata ruang yang dilakukan oleh pemerintah daerah demi mengakomodasi kepentingan investasi.\n\nKawasan yang secara fungsi hidrologis seharusnya menjadi zona tangkapan air (water catchment area) dan hutan lindung mutlak, secara legal diubah statusnya menjadi Areal Penggunaan Lain (APL) untuk pertambangan dan perkebunan sawit melalui revisi peraturan daerah yang minim partisipasi publik. Fenomena gelondongan kayu bernomor yang ditemukan berserakan di lokasi bencana berfungsi sebagai [CORPUS DELICTI] atau bukti tubuh kejahatan yang tak terbantahkan.\n\nKayu-kayu ini, dengan ciri potongan gergaji mesin yang rapi dan cat merah register, membuktikan bahwa aktivitas penebangan di hulu bukanlah ulah peladang kecil, melainkan operasi penebangan mekanis yang [TERENCANA] dan berskala industri. Keputusan politik untuk memprioritaskan ekstraksi sumber daya alam di atas keselamatan ekologis telah menciptakan 'bom waktu' yang kini meledak. Revisi UU Cipta Kerja semakin memperparah situasi dengan mempermudah perizinan di kawasan hutan lindung atas nama [INVESTASI STRATEGIS], mengabaikan analisis dampak lingkungan (AMDAL) yang seharusnya menjadi tameng terakhir keselamatan warga negara."
+        },
+        {
+            "id": "sub_04_greenwashing_plta",
+            "title": "Kedok Energi Hijau: PLTA Batang Toru",
+            "type": "chat_stream",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "environment",
+                "economy_oligarchy"
+            ],
+            "xp_reward": 60,
+            "ai_context": "Proyek PLTA Batang Toru yang dikelola PT NSHE sering dipromosikan sebagai energi hijau (EBT), namun investigasi lapangan menunjukkan praktik Greenwashing yang berbahaya. Proyek ini dibangun di jantung Ekosistem Batang Toru, habitat terakhir Orangutan Tapanuli (Pongo tapanuliensis) yang paling terancam punah di dunia. Konstruksi bendungan, terowongan air, dan jalan akses telah memfragmentasi hutan primer dan merusak stabilitas tanah di kawasan yang rawan gempa tersebut. Kerusakan tutupan hutan di hulu Batang Toru meningkatkan laju run-off (aliran permukaan) dan sedimentasi sungai, yang menjadi faktor utama pemicu banjir bandang di Tapanuli Selatan. Klaim energi bersih ini menyembunyikan fakta kehancuran biodiversitas dan peningkatan risiko bencana hidrometeorologi bagi masyarakat lokal.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Sekarang kita zoom-in ke salah satu proyek paling kontroversial di Sumatera Utara: PLTA Batang Toru."
+                },
+                {
+                    "role": "ai",
+                    "text": "Proyek ini digadang-gadang sebagai solusi krisis listrik dan energi terbarukan (EBT). Terdengar mulia, kan? 🌱"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Iya, kan bagus buat lingkungan?",
+                        "Pasti ada tapinya nih"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Ada 'tapi' yang gede banget. Investigasi nunjukin kalau label 'Hijau' ini sebenernya cuma *Greenwashing*."
+                },
+                {
+                    "role": "ai",
+                    "text": "Lokasi proyek ini ada di jantung Ekosistem Batang Toru, satu-satunya rumah bagi Orangutan Tapanuli (Pongo tapanuliensis) yang baru ditemuin dan udah kritis punah."
+                },
+                {
+                    "role": "ai",
+                    "text": "Pembangunannya butuh ngebuka hutan primer, bikin jalan akses, dan terowongan air raksasa. Ini ngebelah habitat orangutan dan ngerusak fungsi hidrologis hutan."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Terus hubungannya sama banjir?",
+                        "Emang ngaruh ke air?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Ngaruh banget! Hutan Batang Toru itu 'spons' alami yang nyerap air ujan buat Tapanuli Selatan."
+                },
+                {
+                    "role": "ai",
+                    "text": "Pas hutannya dibongkar buat bendungan dan jalan, tanahnya jadi labil. Air ujan gak keserap, tapi langsung lari ke sungai dengan bawa lumpur (sedimentasi)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Laporan Walhi Sumut udah lama warning soal ini. Dan bener aja, pas siklon tropis dateng, daya tampung sungai udah gak sanggup gara-gara pendangkalan dari proyek ini."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ironisnya, proyek yang katanya mau nyelamatin bumi dari perubahan iklim, malah memicu bencana iklim lokal yang ngebunuh warga."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Siapa di balik proyek ini?",
+                        "Pemerintah tau gak?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Proyek ini dikelola PT NSHE (North Sumatera Hydro Energy). Banyak kepentingan elit politik dan investasi asing di situ."
+                },
+                {
+                    "role": "ai",
+                    "text": "Analisis dampak lingkungan (AMDAL)-nya juga cacat prosedur karena gak bener-bener ngitung risiko bencana geologis (ini daerah gempa lho!)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Jadi, banjir kemarin bukan cuma 'takdir'. Itu harga mahal yang harus dibayar warga demi ambisi listrik yang sebenernya surplus di Sumatera."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Fakta PLTA Batang Toru",
+                    "content": "- Lokasi: Habitat Orangutan Tapanuli (Zona Merah Konservasi).\n- Dampak: Fragmentasi hutan & sedimentasi sungai pemicu banjir.\n- Status: Proyek Strategis Nasional (PSN) yang mengabaikan risiko bencana geologis."
+                }
+            ]
+        },
+        {
+            "id": "sub_05_hti_toba_pulp",
+            "title": "Monster Eukaliptus: Toba Pulp Lestari",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "environment",
+                "politics"
+            ],
+            "xp_reward": 50,
+            "ai_context": "Di kawasan Danau Toba, PT Toba Pulp Lestari (TPL) menjadi aktor sentral dalam perubahan fungsi lahan. Perusahaan ini mengonversi hutan alam dan hutan kemenyan (Haminjon) milik masyarakat adat menjadi Hutan Tanaman Industri (HTI) monokultur Eukaliptus. Sifat pohon Eukaliptus yang rakus air (water-intensive) menyebabkan pengeringan lahan gambut dan tanah sekitarnya, serta mengurangi kemampuan tanah menyerap air hujan ekstrem. Saat curah hujan tinggi, tanah yang terdegradasi ini gagal menahan air, memicu banjir lumpur yang menghantam desa-desa di bawahnya seperti di Parapat dan Balige. Konflik agraria juga terjadi karena TPL merampas wilayah adat dengan dukungan aparat, mengatasnamakan status Objek Vital Nasional, sementara fungsi ekologis kawasan Danau Toba terus merosot tajam.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Geser dikit ke Danau Toba. Ada raksasa lain yang punya jejak karbon gede banget: PT Toba Pulp Lestari (TPL)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Mereka punya konsesi Hutan Tanaman Industri (HTI). Artinya, mereka nanem pohon Eukaliptus buat bubur kertas."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Kan nanem pohon, bagus dong?",
+                        "Apa masalahnya Eukaliptus?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Masalahnya, buat nanem Eukaliptus, mereka nebang Hutan Kemenyan (Haminjon) milik masyarakat adat dulu! 🌲🪓"
+                },
+                {
+                    "role": "ai",
+                    "text": "Eukaliptus itu pohon rakus air. Dia nyedot air tanah banyak banget, bikin tanah gambut atau hutan di sekitarnya jadi kering."
+                },
+                {
+                    "role": "ai",
+                    "text": "Pas ujan deres, tanah yang udah kering dan padat karena alat berat itu gak bisa nyerap air lagi (Run-off tinggi)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Hasilnya? Banjir bandang yang bawa lumpur merah khas tanah Toba langsung ngehajar desa-desa di bawahnya, kayak yang kejadian di Parapat dan Balige."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Kok izinnya bisa keluar?",
+                        "Gak diprotes warga?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Diprotes banget! Masyarakat Adat Batak udah bertahun-tahun ngelawan. Tapi izin TPL ini dilindungin negara lewat status Objek Vital Nasional."
+                },
+                {
+                    "role": "ai",
+                    "text": "Lebih parah lagi, ada indikasi manipulasi tata ruang."
+                },
+                {
+                    "role": "ai",
+                    "text": "Kawasan yang harusnya jadi Hutan Lindung di hulu Danau Toba, tiba-tiba diubah statusnya di peta biar TPL bisa masuk secara legal."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini yang disebut 'Legalisasi Kejahatan Lingkungan'. Secarik kertas izin bisa ngebunuh satu kampung."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Dosa Ekologis TPL",
+                    "content": "- Monokultur Eukaliptus: Mengurangi daya serap tanah drastis.\n- Konflik Agraria: Merampas hutan kemenyan masyarakat adat.\n- Bencana: Pemicu utama banjir lumpur di kawasan Danau Toba."
+                }
+            ]
+        },
+        {
+            "id": "sub_06_korban_sosial",
+            "title": "Manusia di Tengah Puing",
+            "type": "redacted_doc",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "human_rights",
+                "politics"
+            ],
+            "xp_reward": 70,
+            "ai_context": "Dampak bencana Sumatera 2025 melampaui angka kematian. Terjadi proses pemiskinan struktural pasca-bencana. Ribuan hektar sawah produktif mengalami 'puso' permanen akibat tertimbun material lumpur dan batuan setebal 2 meter, menghilangkan mata pencaharian petani selama bertahun-tahun. Penanganan pengungsi sangat buruk, dengan barak hunian sementara (huntara) yang tidak layak sanitasi, memicu wabah penyakit. Lebih buruk lagi, terjadi pembungkaman suara korban. Warga dan aktivis lingkungan yang mencoba memviralkan foto-foto 'kayu bernomor' atau memprotes perusahaan tambang/sawit mengalami intimidasi dan kriminalisasi menggunakan pasal karet UU ITE. Negara hadir secara represif untuk melindungi citra investasi, sementara hak dasar warga atas lingkungan yang aman dan pemulihan pasca-bencana diabaikan.",
+            "content": "Dampak bencana ini melampaui angka statistik 900 korban jiwa. Di lapangan, terjadi fenomena [PEMISKINAN STRUKTURAL] yang masif. Ribuan petani kehilangan lahan sawah produktif yang tertimbun material lumpur setebal 2 meter, membuat tanah tersebut tidak bisa ditanami (puso) selama minimal 5 tahun.\n\nInvestigasi lapangan menemukan bahwa bantuan rehabilitasi dari pemerintah pusat seringkali [SALAH SASARAN] atau dikorupsi di tingkat lokal. Warga yang kehilangan rumah dipaksa relokasi ke barak hunian sementara (huntara) yang tidak layak huni, tanpa sanitasi memadai, memicu wabah penyakit pasca-banjir.\n\nLebih tragis lagi, suara korban dibungkam. Aktivis lingkungan dan warga yang mencoba memviralkan foto kayu bernomor milik korporasi di media sosial mengalami intimidasi dan [KRIMINALISASI] menggunakan UU ITE dengan tuduhan menyebarkan berita bohong yang meresahkan. Negara seolah lebih sibuk menyelamatkan citra investasi daripada nyawa warganya sendiri."
+        },
+        {
+            "id": "sub_07_kesimpulan_forensik",
+            "title": "Verdict: Ini Bukan Takdir",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "critical_thinking",
+                "politics"
+            ],
+            "xp_reward": 100,
+            "ai_context": "Kesimpulan investigasi menegaskan bahwa Banjir Sumatera 2025 adalah 'Bencana Antropogenik' atau buatan manusia, bukan takdir alam. Faktor pemicu utamanya adalah akumulasi kerusakan DAS akibat ekspansi industri ekstraktif (tambang, sawit, HTI) yang didukung kebijakan tata ruang yang koruptif. Rekomendasi mendesak meliputi: 1) Audit Lingkungan Menyeluruh terhadap seluruh konsesi di hulu sungai terdampak. 2) Moratorium Total penebangan hutan alam di Sumatera tanpa pengecualian. 3) Penegakan Hukum dengan prinsip 'Strict Liability' (Tanggung Jawab Mutlak) untuk menyeret korporasi pemilik kayu bernomor dan konsesi bermasalah ke pengadilan, serta pemulihan biaya lingkungan yang harus ditanggung oleh pelaku, bukan uang negara.",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Kita udah bedah dari hulu ke hilir. Dari kayu bernomor, tambang emas, PLTA, sampe Eukaliptus."
+                },
+                {
+                    "role": "ai",
+                    "text": "Kesimpulannya jelas: Banjir Sumatera 2025 bukan 'Amukan Alam', tapi 'Akumulasi Keserakahan'."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Setuju banget",
+                        "Terus solusinya apa?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Solusinya bukan cuma bagi-bagi mie instan pas bencana."
+                },
+                {
+                    "role": "ai",
+                    "text": "1. Audit Lingkungan Total: Cabut izin perusahaan yang terbukti konsesinya jadi titik awal banjir. Bekukan operasi PT AR dan TPL di zona merah."
+                },
+                {
+                    "role": "ai",
+                    "text": "2. Moratorium Penebangan: Stop semua izin baru di Hutan Alam Sumatera. Titik. Gak ada tawar menawar."
+                },
+                {
+                    "role": "ai",
+                    "text": "3. Penegakan Hukum: Seret direksi perusahaan pemilik 'kayu bernomor' itu ke pengadilan. Jangan cuma nebang pelaku lapangan (supir truk), tapi otak intelektualnya."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Bisa gak ya kita lakuin?",
+                        "Susah lawan oligarki"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Susah, tapi wajib. Kalau nggak, Sumatera bakal tenggelam."
+                },
+                {
+                    "role": "ai",
+                    "text": "Kita sebagai warga punya peran: Jangan pilih politisi yang dibiayai oligarki tambang/sawit. Cek rekam jejaknya."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ingat, setiap kali kita diem liat hutan dibabat, kita lagi nyiapin nisan buat masa depan kita sendiri."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Rekomendasi Warga+",
+                    "content": "- Cabut Izin: Evaluasi total konsesi di hulu DAS.\n- Restorasi: Wajibkan perusahaan memulihkan DAS yang rusak.\n- Justice: Pengadilan lingkungan untuk korporasi (Strict Liability)."
+                }
+            ]
+        },
+        {
+            "id": "sub_08_bibliography",
+            "title": "Daftar Pustaka & Bukti Digital",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking",
+                "academic"
+            ],
+            "xp_reward": 20,
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Investigasi ini bukan opini kosong. Setiap klaim soal 'Kayu Bernomor' sampai 'Greenwashing PLTA' didasarkan pada data faktual."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini adalah 'Evidence Locker' (Ruang Bukti) kita. Semua jejak digital korporasi dan laporan media tersimpan di sini. Silakan verifikasi sendiri. 🧐"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "1. Laporan Bencana & Korban",
+                    "content": "• Update Korban Bencana Sumatra 916 Meninggal (Liputan6)\n• Daftar 3 Perusahaan yang Operasional Disetop Menteri LH (CNN Indonesia)\n• Walhi Soroti Tambang Martabe di Tengah Bencana (Kontan)\n• Banjir Sumatera: Kombinasi Faktor Alam dan Ulah Manusia (UMS)\n• Banjir Bandang Tewaskan 916 Jiwa (Katasumbar)\n• Kebun Sawit Dituding Jadi Pemicu Banjir (Liputan6)\n• Pakar UGM Peringatkan Ancaman Longsor (Tanjungpinangkota.go.id)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "2. Bukti Forensik: Kayu & Illegal Logging",
+                    "content": "• Jejak Ilegal Logging: Menguak Tabir Kayu Bernomor (Sukabumiupdate)\n• RAHASIA TERKUAK: Kayu Bernomor Merah Jadi Bukti (Akurat Banten)\n• Kemenhut Usut 12 Perusahaan Diduga Penyebab Banjir (Tempo)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Lanjut ke bagian paling 'panas': Jejak korporasi tambang emas dan proyek energi yang katanya hijau tapi merusak."
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "3. Tambang Emas & PLTA Batang Toru",
+                    "content": "• PT Agincourt Resources (PTAR) Mining Profile (Agincourtresources.com)\n• Superintendent – Stakeholder Relations Document (Agincourtresources.com)\n• Bahlil Akan Periksa Tambang di Kawasan Banjir (Tempo)\n• Bencana Sumatera: Habis Hutan, Sengsara Terbilang (Betahita)\n• Batang Toru Hydropower Project (Wikipedia)\n• China's big firms put reputation at risk in Batang Toru (Asia News Network)\n• 3 Perusahaan Tambang di Tapsel Ditutup Sementara (Detik)\n• ESDM Temukan 23 Izin Tambang di Tiga Provinsi Terdampak (Warta Ekonomi)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "4. Oligarki Sawit & Jejak Elit",
+                    "content": "• Socfindo Company Profile & Locations (Socfin.com)\n• Diungkap Politisi PKS: Pengusaha Sawit Tinggal di Singapura (Harian Umum)\n• Sindir Penguasa Sawit: Rakyat Tenggelam, Mereka Enak Tidur (Edarinfo)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Terakhir, ini bukti kegagalan negara dalam tata kelola lahan. Dari Qanun Aceh sampai Revisi UU Cipta Kerja yang mempermudah perusakan."
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "5. Tata Kelola, Regulasi & Deforestasi",
+                    "content": "• Pj Gubernur Safrizal Terkait Rancangan Qanun Prolega 2024 (Diskominfo Aceh)\n• DPRA Sepakat Alih Hutan Lindung Jadi APL (Tribunnews)\n• RANTEKNO RPJMD PROVINSI SUMATERA UTARA 2025-2029 (JDIH Sumut)\n• Revisi UU Cipta Kerja Mendesak di Tengah Kerusakan Hutan (RMOL)\n• Walhi Soroti Deforestasi 1,4 Juta Hektare di Sumatera (Suara Merdeka)\n• WALHI Ungkap Penyebab Hilangnya Hutan Sumatera (Radar Pasuruan)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Data gak pernah bohong, Warga. Sekarang giliran lo: mau diem aja atau ikut bersuara? ✊"
+                }
+            ]
+        }
+    ]
+}

@@ -1,39 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
-  <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Warga+">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Warga+</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-visual">
+
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
+
 <body>
   <script src="flutter_bootstrap.js" async></script>
+
+  <script>
+    // === ENHANCED POLLING + FORCE BLUR APPROACH ===
+    // Browser debugging revealed: focus persistence prevents layout recovery
+
+    let lastKnownHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    let isKeyboardOpen = false;
+
+    function applyForceFix() {
+      const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+
+      // Force blur on active element to trigger browser layout reset
+      if (document.activeElement &&
+        (document.activeElement.tagName === 'INPUT' ||
+          document.activeElement.tagName === 'TEXTAREA')) {
+        document.activeElement.blur();
+      }
+
+      // Reset scroll
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+
+      // Force height on body
+      document.body.style.height = vh + 'px';
+
+      // Force height on flutter-view element
+      const flutterView = document.querySelector('flutter-view');
+      if (flutterView) {
+        flutterView.style.height = vh + 'px';
+        flutterView.style.position = 'absolute';
+        flutterView.style.top = '0';
+      }
+
+      // Force height on flt-glass-pane
+      const glassPane = document.querySelector('flt-glass-pane');
+      if (glassPane) {
+        glassPane.style.height = vh + 'px';
+      }
+
+      // Dispatch resize for Flutter
+      try {
+        window.dispatchEvent(new Event('resize'));
+      } catch (e) { }
+    }
+
+    function checkAndResetViewport() {
+      const currentHeight = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+
+      // Keyboard closed: height increased significantly
+      if (currentHeight > lastKnownHeight + 50) {
+        isKeyboardOpen = false;
+        // Multiple attempts with delays
+        applyForceFix();
+        setTimeout(applyForceFix, 100);
+        setTimeout(applyForceFix, 300);
+      }
+      // Keyboard opened: height decreased
+      else if (currentHeight < lastKnownHeight - 100) {
+        isKeyboardOpen = true;
+      }
+
+      lastKnownHeight = currentHeight;
+    }
+
+    // Poll every 100ms
+    setInterval(checkAndResetViewport, 100);
+
+    // Event listeners as backup
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', checkAndResetViewport);
+    }
+    window.addEventListener('resize', checkAndResetViewport);
+
+    // Focus events
+    document.addEventListener('blur', function (e) {
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) {
+        setTimeout(applyForceFix, 50);
+        setTimeout(applyForceFix, 200);
+      }
+    }, true);
+
+    document.addEventListener('focusout', function (e) {
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) {
+        setTimeout(applyForceFix, 50);
+        setTimeout(applyForceFix, 200);
+      }
+    });
+
+    // Initial check
+    checkAndResetViewport();
+  </script>
 </body>
+
 </html>

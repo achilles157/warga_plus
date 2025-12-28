@@ -10,38 +10,44 @@ class ResponsiveWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Only apply constraint on Web or Desktop platforms
-    if (kIsWeb ||
-        defaultTargetPlatform == TargetPlatform.windows ||
-        defaultTargetPlatform == TargetPlatform.linux ||
-        defaultTargetPlatform == TargetPlatform.macOS) {
-      return Container(
-        color: const Color(
-            0xFFF0F2F5), // Light grey background like generic web apps
-        alignment: Alignment.center,
-        child: Container(
-          constraints: const BoxConstraints(
-            maxWidth: 480, // Max width for mobile-like experience
-          ),
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.1),
-                blurRadius: 20,
-                offset: const Offset(0, 10),
-              ),
-            ],
-          ),
-          child: ClipRRect(
-            // Optional: Add rounded corners if you want it to look like a floating phone
-            // borderRadius: BorderRadius.circular(16),
-            child: child,
-          ),
-        ),
-      );
-    }
+    // Use LayoutBuilder to get actual screen width
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // Only apply mobile-like constraints on WIDE screens (desktop/tablet)
+        // This prevents the wrapper from affecting narrow screens (mobile web)
+        final bool isWideScreen = constraints.maxWidth > 600;
 
-    // On actual mobile devices, just return the child
-    return child;
+        if (isWideScreen &&
+            (kIsWeb ||
+                defaultTargetPlatform == TargetPlatform.windows ||
+                defaultTargetPlatform == TargetPlatform.linux ||
+                defaultTargetPlatform == TargetPlatform.macOS)) {
+          return Container(
+            color: const Color(0xFFF0F2F5),
+            alignment: Alignment.center,
+            child: Container(
+              constraints: const BoxConstraints(
+                maxWidth: 480,
+              ),
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.1),
+                    blurRadius: 20,
+                    offset: const Offset(0, 10),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                child: child,
+              ),
+            ),
+          );
+        }
+
+        // On narrow screens (mobile web, actual mobile), just return the child
+        return child;
+      },
+    );
   }
 }

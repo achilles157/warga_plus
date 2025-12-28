@@ -30,6 +30,35 @@ class ProfileService {
     return _firestore.collection('users').doc(user.uid).snapshots();
   }
 
+  /// Ensures user document exists in Firestore.
+  /// Creates it with default values if it doesn't exist.
+  /// Call this after ANY sign-in (email, Google, etc.)
+  Future<void> ensureUserDocument() async {
+    final user = _auth.currentUser;
+    if (user == null) return;
+
+    final userRef = _firestore.collection('users').doc(user.uid);
+    final userDoc = await userRef.get();
+
+    if (!userDoc.exists) {
+      // Create new user document with default values
+      await userRef.set({
+        'email': user.email ?? '',
+        'display_name': user.displayName ?? '',
+        'photo_url': user.photoURL ?? '',
+        'total_xp': 0,
+        'current_streak': 1,
+        'last_active': FieldValue.serverTimestamp(),
+        'tag_scores': {},
+        'completed_modules': [],
+        'created_at': FieldValue.serverTimestamp(),
+      });
+      debugPrint('Created new user document for ${user.uid}');
+    } else {
+      debugPrint('User document already exists for ${user.uid}');
+    }
+  }
+
   // Perform daily check-in logic
   Future<void> checkIn() async {
     final user = _auth.currentUser;
