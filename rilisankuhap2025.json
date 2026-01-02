@@ -1,0 +1,454 @@
+{
+    "release_id": "hukum_kuhap_2025",
+    "title": "KUHAP 2025: Keadilan atau Ancaman Baru?",
+    "description": "Bedah tuntas transformasi hukum acara pidana terbaru. Menguak pasal penyadapan, hak tersangka yang dikebiri, hingga partisipasi publik yang semu.",
+    "cover_image": "https://placehold.co/600x800/png?text=KUHAP+2025",
+    "author": "Tim Riset Warga+",
+    "created_at": "2025-11-20T10:00:00Z",
+    "tags": [
+        "law_policy",
+        "human_rights",
+        "politics",
+        "critical_thinking"
+    ],
+    "total_xp": 600,
+    "sub_modules": [
+        {
+            "id": "sub_01_intro_paradigma",
+            "title": "Intro: Ganti Baju atau Ganti Jiwa?",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "law_policy",
+                "politics"
+            ],
+            "xp_reward": 40,
+            "ai_context": "",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Halo Warga! 👋 Ada kabar besar dari Senayan nih. Tanggal 18 November 2025 kemarin, DPR resmi ketok palu UU KUHAP yang baru."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini bukan UU sembarangan lho. KUHAP (Kitab Undang-Undang Hukum Acara Pidana) itu 'Kitab Suci'-nya polisi, jaksa, dan hakim dalam nangkep & ngadili orang."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Emang yang lama kenapa?",
+                        "Bedanya sama KUHP apa?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Beda banget! Kalau KUHP itu daftar dosa (apa yang dilarang), KUHAP itu buku panduan cara menghukumnya (gimana nangkepnya, nahannya, nyidangnya)."
+                },
+                {
+                    "role": "ai",
+                    "text": "KUHAP lama kita itu bikinan tahun 1981 (zaman Orba). Udah 44 tahun gak diganti. Katanya sih udah usang dan gak sesuai zaman digital."
+                },
+                {
+                    "role": "ai",
+                    "text": "Pemerintah bilang KUHAP 2025 ini adalah 'Karya Agung Anak Bangsa' yang ninggalin warisan kolonial Belanda. Terdengar heroik ya?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Mereka janjiin modernisasi hukum, peradilan yang lebih cepet, dan perlindungan HAM yang lebih kuat."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Bagus dong kalau gitu?",
+                        "Tapi kok ada polemik?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Nah, di situlah plot twist-nya. Riset hukum nunjukin kalau 'Jiwa' UU baru ini justru ngasih *power* super gede ke aparat penegak hukum."
+                },
+                {
+                    "role": "ai",
+                    "text": "Banyak pasal yang justru mundur ke belakang. Hak tersangka buat ngebela diri dipersempit, sementara wewenang polisi buat nyadap & nahan diperluas."
+                },
+                {
+                    "role": "ai",
+                    "text": "Kritikus bilang ini bukan 'Due Process of Law' (Proses hukum yang adil), tapi malah 'Crime Control Model' yang agresif."
+                },
+                {
+                    "role": "ai",
+                    "text": "Jadi, pertanyaannya: Apakah ini reformasi hukum, atau justru alat baru buat negara supaya lebih gampang menekan warganya? 🤔"
+                },
+                {
+                    "role": "ai",
+                    "text": "Siap bedah pasal-pasal 'ngeri' di dalamnya? Kita mulai dari proses pembuatannya yang katanya kilat banget."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Poin Kunci Intro",
+                    "content": "- KUHAP = Hukum Acara (Cara Penegakan), beda dengan KUHP.\n- Menggantikan UU No. 8 Tahun 1981 warisan Orde Baru.\n- Klaim Pemerintah: Modernisasi & Dekolonisasi.\n- Kritik: Memberi kekuasaan berlebih pada aparat (Excessive Force)."
+                }
+            ]
+        },
+        {
+            "id": "sub_02_transparansi_semu",
+            "title": "Partisipasi Hantu & Rapat Kilat",
+            "type": "redacted_doc",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "politics",
+                "critical_thinking"
+            ],
+            "xp_reward": 60,
+            "ai_context": "",
+            "content": "Proses legislasi KUHAP 2025 mencatat rekor kecepatan yang mengkhawatirkan sekaligus mencurigakan. DPR RI dan Pemerintah berhasil menyelesaikan pembahasan 285 Daftar Inventarisasi Masalah (DIM) yang sangat krusial hanya dalam waktu kurang dari [DUA MINGGU]. Metode pembahasan yang digunakan adalah sistem 'Kebut Semalam' di mana rapat-rapat Panitia Kerja (Panja) seringkali digelar secara tertutup atau pada jam-jam tidak wajar, meminimalisir pantauan jurnalis dan publik.\n\nKlaim adanya 'Meaningful Participation' (partisipasi bermakna) yang digembar-gemborkan ternyata hanyalah [GIMMICK] prosedural. Forum Dengar Pendapat Umum (RDPU) memang diselenggarakan, namun masukan substansial dari koalisi masyarakat sipil, LBH, dan akademisi hukum pidana mayoritas [DIABAIKAN] dan tidak diadopsi ke dalam naskah final. Dokumen naskah akademik dan draf RUU terbaru sangat sulit diakses oleh publik hingga detik-detik terakhir pengesahan, menciptakan kondisi [INFORMASI ASIMETRIS].\n\nPola ini mengulang taktik pengesahan UU Cipta Kerja dan Revisi UU KPK, di mana kecepatan pengesahan menjadi prioritas di atas kualitas deliberasi demokratis. Akibatnya, produk hukum yang dihasilkan cacat secara sosiologis karena tidak mencerminkan kehendak dan perlindungan bagi rakyat, melainkan pesanan efisiensi penegakan hukum semata."
+        },
+        {
+            "id": "sub_03_pasal_karet_penyadapan",
+            "title": "Mata-Mata Legal: Rezim Penyadapan",
+            "type": "chat_stream",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "human_rights",
+                "law_policy"
+            ],
+            "xp_reward": 70,
+            "ai_context": "",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Oke, kita masuk ke dagingnya. Salah satu isu paling panas di KUHAP 2025 adalah soal: Penyadapan (Interception). 🕵️‍♂️"
+                },
+                {
+                    "role": "ai",
+                    "text": "Di era digital, HP kita adalah nyawa kita. Privasi banget. Tapi UU baru ini ngasih 'kunci ganda' ke aparat buat ngintip isi HP lo."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Emang dulu gak boleh?",
+                        "Bedanya apa sama yang lama?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Dulu, penyadapan itu prosedur yang super ketat. Harus ada izin khusus ketua pengadilan, dan cuma buat kasus kejahatan luar biasa (Terorisme/Korupsi)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi di KUHAP 2025, definisi 'Kejahatan Mendesak' yang boleh disadap diperluas banget. Jadi karet."
+                },
+                {
+                    "role": "ai",
+                    "text": "Penyidik sekarang bisa melakukan penyadapan TANPA izin pengadilan terlebih dahulu dalam kondisi 'Mendesak'. Izinnya bisa nyusul belakangan (post-factum)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Bahayanya apa? Siapa yang ngawasin kalau ternyata 'kondisi mendesak' itu cuma akal-akalan penyidik buat mata-matai aktivis atau lawan politik?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Ngeri juga ya",
+                        "Privasi ilang dong?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Banget. Ditambah lagi, durasi penyadapan diperpanjang. Aparat bisa dengerin telepon dan baca chat WA lo berbulan-bulan tanpa lo tau."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini berpotensi melanggar hak privasi (Right to Privacy) yang dijamin UUD 1945. Kita jadi kayak hidup di negara 'Big Brother'."
+                },
+                {
+                    "role": "ai",
+                    "text": "ICJR dan koalisi sipil udah teriak soal ini. Tanpa mekanisme kontrol (Judicial Scrutiny) yang ketat, alat sadap ini rawan disalahgunakan buat kriminalisasi."
+                },
+                {
+                    "role": "ai",
+                    "text": "Bayangin lo lagi kritik pemerintah di grup WA, eh besoknya diciduk karena chat lo udah disadap tanpa surat izin hakim. Serem kan?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Solusinya gimana?",
+                        "Bisa dibatalin gak?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Sekarang UU-nya udah sah. Satu-satunya jalan ya uji materi (Judicial Review) ke MK. Tapi itu jalan panjang dan terjal."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Pasal Penyadapan KUHAP 2025",
+                    "content": "- Izin Penyadapan: Bisa dilakukan tanpa izin hakim di awal (kondisi mendesak).\n- Definisi: Kategori tindak pidana yang boleh disadap makin luas/kabur.\n- Risiko: Abuse of Power untuk memata-matai warga sipil & lawan politik."
+                }
+            ]
+        },
+        {
+            "id": "sub_04_hak_tersangka",
+            "title": "Tersangka atau Objek Penderita?",
+            "type": "redacted_doc",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "human_rights",
+                "law_policy"
+            ],
+            "xp_reward": 80,
+            "ai_context": "",
+            "content": "Perlindungan terhadap hak asasi manusia dalam proses peradilan pidana mengalami kemunduran signifikan dalam KUHAP 2025. Salah satu sorotan tajam adalah penghapusan atau pelemahan mekanisme [PRA-PERADILAN] sebagai alat kontrol paksa.\n\nDalam UU lama, tersangka bisa menggugat penetapan tersangka yang tidak sah lewat Praperadilan. Namun, dalam KUHAP baru, kewenangan Hakim Komisaris (yang digadang sebagai pengganti Praperadilan) justru dibatasi. Akses bantuan hukum (Legal Aid) bagi tersangka miskin juga diperumit dengan birokrasi administratif yang berbelit. Lebih mengerikan lagi, terdapat pasal yang memungkinkan penyidik untuk [MENUNDA] pemberitahuan penahanan kepada keluarga tersangka hingga 7x24 jam dalam kasus tertentu.\n\nIni membuka celah lebar bagi praktik penyiksaan (torture) dan penghilangan paksa (enforced disappearance) dalam periode 'Incommunicado Detention' tersebut. Tersangka seolah diletakkan bukan sebagai subjek yang punya hak ingkar, melainkan sebagai [OBJEK] pemeriksaan yang harus tunduk mutlak pada kuasa penyidik. Prinsip 'Presumption of Innocence' (Praduga Tak Bersalah) perlahan tergerus menjadi 'Presumption of Guilt' oleh sistem."
+        },
+        {
+            "id": "sub_05_super_penyidik",
+            "title": "Superbody: Dominasi Penyidik",
+            "type": "chat_stream",
+            "estimated_time": "5 min",
+            "specific_tags": [
+                "law_policy",
+                "politics"
+            ],
+            "xp_reward": 60,
+            "ai_context": "",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Dalam sistem peradilan yang sehat, harusnya ada 'Check and Balances'. Polisi nangkep, Jaksa nuntut, Hakim mutusin. Saling ngawasin."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi KUHAP 2025 ini dinilai terlalu 'Polisi-Sentris'. Kewenangan penyidik (Kepolisian) jadi super kuat alias Superbody. 💪👮‍♂️"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Kuat gimana maksudnya?",
+                        "Jaksa ngapain aja?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Konsep idealnya kan 'Dominus Litis', di mana Jaksa itu pengendali perkara. Jaksa harusnya bisa nyetop penyidikan polisi kalau buktinya gak kuat."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi di UU baru ini, peran Jaksa sebagai pengendali pengendali (Master of Case) masih lemah. Polisi masih dominan banget dalam nentuin nasib perkara."
+                },
+                {
+                    "role": "ai",
+                    "text": "Salah satu poin kontroversial adalah kewenangan penahanan. Syarat subjektif penahanan ('khawatir melarikan diri') masih dipertahankan dan karet banget."
+                },
+                {
+                    "role": "ai",
+                    "text": "Artinya, penyidik bisa nahan orang cuma berdasarkan 'feeling' subjektif mereka, tanpa parameter objektif yang ketat."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Rawan kriminalisasi dong?",
+                        "Gak ada yang ngawasin?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Tepat! Hakim Pemeriksa Pendahuluan (HPP) yang harusnya jadi wasit di awal proses, wewenangnya dipangkas jadi macan ompong."
+                },
+                {
+                    "role": "ai",
+                    "text": "HPP gak bisa serta merta membatalkan penyidikan yang semena-mena tanpa proses yang ribet."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini bikin posisi tawar warga sipil di depan polisi jadi lemah banget. Kalau lo ditarget, susah banget buat lolos dari jeratan penahanan, meskipun bukti awalnya lemah."
+                },
+                {
+                    "role": "ai",
+                    "text": "Inilah kenapa banyak pakar hukum bilang KUHAP 2025 ini kemunduran reformasi Polri."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Dominasi Penyidik (Polisi)",
+                    "content": "- Weak Judicial Control: Peran hakim pengawas (HPP) lemah.\n- Penahanan Subjektif: Alasan penahanan masih karet & di tangan penyidik.\n- Dominus Litis Semu: Jaksa belum sepenuhnya mengendalikan perkara sejak awal."
+                }
+            ]
+        },
+        {
+            "id": "sub_06_defisit_demokrasi",
+            "title": "Defisit Demokrasi & Oligarki Hukum",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "politics",
+                "economy_oligarchy"
+            ],
+            "xp_reward": 50,
+            "ai_context": "",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Kalau kita zoom-out, pengesahan KUHAP 2025 ini sebenernya cermin dari masalah yang lebih gede: Defisit Demokrasi. 📉"
+                },
+                {
+                    "role": "ai",
+                    "text": "Kenapa UU sepenting ini, yang ngatur idup-mati orang, bisa lolos dengan mulus tanpa protes gede kayak Demo 2019?"
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Kenapa tuh?",
+                        "Masyarakat udah capek?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Bener, ada faktor 'Civil Society Fatigue'. Masyarakat udah capek demo terus tapi hasilnya nihil (kayak UU Ciptaker)."
+                },
+                {
+                    "role": "ai",
+                    "text": "Tapi ada juga taktik 'Oligarki Hukum'. Elit politik dan aparat bersatu buat bikin aturan yang ngamanin posisi mereka."
+                },
+                {
+                    "role": "ai",
+                    "text": "KUHAP yang represif ini menguntungkan penguasa. Kenapa? Karena lebih gampang buat ngebungkam kritik."
+                },
+                {
+                    "role": "ai",
+                    "text": "Penyadapan gampang, penahanan gampang, praperadilan susah. Ini resep sempurna buat ngelanggengin kekuasaan."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Jadi hukum buat siapa?",
+                        "Buat rakyat atau penguasa?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Dari analisis pasal-pasalnya, jelas hukum ini condong ke 'Ketertiban' (Order) versi penguasa, bukan 'Keadilan' (Justice) versi rakyat."
+                },
+                {
+                    "role": "ai",
+                    "text": "DPR yang harusnya wakilin rakyat, malah jadi stempel pemerintah. Fungsi checks and balances mati suri."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini peringatan keras, Warga. Demokrasi kita lagi dibongkar pelan-pelan lewat jalur legal (Autocratic Legalism)."
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Analisis Politik Hukum",
+                    "content": "- Autocratic Legalism: Menggunakan hukum legal untuk tujuan otoriter.\n- Civil Fatigue: Kelelahan masyarakat sipil dimanfaatkan untuk meloloskan UU kontroversial.\n- Oligarki: Hukum didesain untuk melindungi status quo kekuasaan."
+                }
+            ]
+        },
+        {
+            "id": "sub_07_kesimpulan",
+            "title": "Kesimpulan: Siaga Satu Hukum",
+            "type": "chat_stream",
+            "estimated_time": "4 min",
+            "specific_tags": [
+                "critical_thinking",
+                "law_policy"
+            ],
+            "xp_reward": 100,
+            "ai_context": "",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Perjalanan panjang kita bedah KUHAP 2025 selesai. Kesimpulannya gak enak didenger, tapi harus kita telen."
+                },
+                {
+                    "role": "ai",
+                    "text": "KUHAP 2025, di balik kemasan 'modernisasi'-nya, menyimpan potensi besar jadi alat represi negara."
+                },
+                {
+                    "role": "user_choice",
+                    "options": [
+                        "Terus kita harus apa?",
+                        "Pasrah aja?"
+                    ]
+                },
+                {
+                    "role": "ai",
+                    "text": "Jangan pasrah! Justru karena UU-nya udah sah, kita harus ekstra waspada. 'Legal Literacy' (Melek Hukum) adalah tameng terakhir kita."
+                },
+                {
+                    "role": "ai",
+                    "text": "1. Pahami Hak Lo: Kalau berurusan sama aparat, inget hak bantuan hukum & hak diam. Jangan mau dipaksa ttd BAP tanpa pengacara."
+                },
+                {
+                    "role": "ai",
+                    "text": "2. Dokumentasi: Di era penyadapan legal, dokumentasi publik (viral) kadang jadi satu-satunya cara cari keadilan."
+                },
+                {
+                    "role": "ai",
+                    "text": "3. Dukung Judicial Review: Support LSM/LBH yang lagi berjuang di Mahkamah Konstitusi buat batalin pasal-pasal karet ini."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ingat kata-kata ini: 'Hukum adalah sarang laba-laba. Menjerat yang lemah, tapi ditembus oleh yang kuat.' Tugas kita bikin jaring itu adil buat semua."
+                },
+                {
+                    "role": "ai",
+                    "text": "Stay safe, stay critical, Warga! Kita jaga republik ini bareng-bareng. 🇮🇩✊"
+                },
+                {
+                    "role": "summary_card",
+                    "title": "Rekomendasi Aksi",
+                    "content": "- Melek Hukum: Pelajari hak tersangka di KUHAP baru.\n- Solidaritas: Dukung korban kriminalisasi & kerja LBH.\n- Pengawasan: Pantau implementasi pasal penyadapan & penahanan."
+                }
+            ]
+        },
+        {
+            "id": "sub_08_bibliography",
+            "title": "Daftar Pustaka & Sumber",
+            "type": "chat_stream",
+            "estimated_time": "3 min",
+            "specific_tags": [
+                "critical_thinking",
+                "academic"
+            ],
+            "xp_reward": 20,
+            "ai_context": "",
+            "chat_script": [
+                {
+                    "role": "ai",
+                    "text": "Analisis ini bukan kaleng-kaleng. Kita rangkum dari laporan riset hukum, jurnal, dan berita valid."
+                },
+                {
+                    "role": "ai",
+                    "text": "Ini daftar 'amunisi' referensi kita. Cek sendiri kalau gak percaya! 📚"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "1. Pengesahan & Proses Legislasi",
+                    "content": "• DPR Sahkan RUU Hukum Acara Pidana Jadi UU (DPR.go.id)\n• RUU KUHAP Disahkan, Menkumham: Tonggak Sejarah Baru (Antara)\n• Jalan Panjang Reformasi Hukum Acara Pidana (Hukumonline)\n• Kritik 'Kebut Semalam' Pembahasan RUU (Tempo/Kompas)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "2. Isu Penyadapan & Privasi",
+                    "content": "• Ancaman Privasi di Balik Pasal Penyadapan KUHAP Baru (ICJR)\n• Analisis Hukum Penyadapan Tanpa Izin Pengadilan (Jurnal Konstitusi)\n• SAFEnet Report: Digital Rights & Surveillance in Indonesia 2025"
+                },
+                {
+                    "role": "ai",
+                    "text": "Lanjut ke analisis hak asasi dan wewenang aparat. Ini yang sering didebat para pakar."
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "3. Hak Tersangka & Wewenang Aparat",
+                    "content": "• Due Process of Law vs Crime Control Model (Jurnal Hukum Pidana UI)\n• Posisi Hakim Komisaris dalam KUHAP 2025 (LeIP)\n• Masa Penahanan & Potensi Abuse of Power (YLBHI)\n• Sinergi Kejaksaan & KPK Pasca KUHAP Baru (Kejaksaan.go.id)"
+                },
+                {
+                    "role": "bibliography_card",
+                    "title": "4. Opini Publik & Organisasi Profesi",
+                    "content": "• PERADI Apresiasi Prinsip Due Process of Law (AntaraNews)\n• Catatan Kritis Koalisi Sipil untuk Reformasi KUHAP (ICW/KontraS)\n• Tantangan Implementasi KUHAP di Daerah (Kompas.id)"
+                },
+                {
+                    "role": "ai",
+                    "text": "Jangan cuma baca headline ya. Baca isinya biar gak gampang dibodohin! 👋"
+                }
+            ]
+        }
+    ]
+}
