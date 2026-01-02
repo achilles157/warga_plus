@@ -20,9 +20,9 @@ class TimelineNode extends StatelessWidget {
   });
 
   /// Generates a partially censored title for locked modules
-  /// Shows first few chars + redaction blocks to create intrigue
+  /// Shows enough chars for users to guess the topic
   String _generateCensoredTitle(String title) {
-    if (title.length <= 5) return "███████";
+    if (title.length <= 5) return "███";
 
     final words = title.split(' ');
     final result = StringBuffer();
@@ -30,24 +30,30 @@ class TimelineNode extends StatelessWidget {
     for (int i = 0; i < words.length; i++) {
       final word = words[i];
       if (i == 0) {
-        // First word: show first 2-3 chars then censor
+        // First word: show first 4-5 chars then light censor
+        if (word.length <= 4) {
+          result.write(word);
+        } else {
+          result.write(word.substring(0, 4));
+          result.write('█' * (word.length - 4).clamp(1, 2)); // Less blocks
+        }
+      } else if (i == words.length - 1) {
+        // Last word: show more (first 2 + last 2)
         if (word.length <= 3) {
           result.write(word);
         } else {
-          result.write(word.substring(0, 3));
-          result.write('█' * (word.length - 3).clamp(1, 4));
-        }
-      } else if (i == words.length - 1 && words.length > 2) {
-        // Last word: show partial
-        if (word.length <= 2) {
-          result.write(word);
-        } else {
-          result.write('█' * 2);
+          result.write(word.substring(0, 2));
+          result.write('█');
           result.write(word.substring(word.length - 2));
         }
       } else {
-        // Middle words: mostly censored
-        result.write('█' * word.length.clamp(2, 5));
+        // Middle words: show first 2-3 chars + light censor
+        if (word.length <= 3) {
+          result.write(word);
+        } else {
+          result.write(word.substring(0, 2));
+          result.write('█' * (word.length - 2).clamp(1, 2));
+        }
       }
       if (i < words.length - 1) result.write(' ');
     }
