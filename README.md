@@ -85,21 +85,17 @@ lib/
 │   └── admin/       # Portal Admin & Import JSON
 ├── main.dart        # Entry point
 └── firebase_options.dart
+```
 
 ---
 
-**🤝 Berkontribusi**
+### 🤝 Berkontribusi
 Kontribusi sangat diterima! Jika Anda ingin menambahkan fitur atau memperbaiki bug:
+- Fork repository ini.
+- Buat branch fitur baru (git checkout -b fitur-keren).
+- Commit perubahan Anda (git commit -m 'Menambah fitur keren').
+- Push ke branch tersebut (git push origin fitur-keren).
+- Buat Pull Request.
 
-Fork repository ini.
-
-Buat branch fitur baru (git checkout -b fitur-keren).
-
-Commit perubahan Anda (git commit -m 'Menambah fitur keren').
-
-Push ke branch tersebut (git push origin fitur-keren).
-
-Buat Pull Request.
-
-**📄 Lisensi**
+### 📄 Lisensi
 Hak Cipta © 2025 WargaPlus.
