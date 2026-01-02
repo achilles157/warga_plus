@@ -6,6 +6,7 @@ import 'core/services/ai_service.dart';
 import 'core/services/auth_service.dart';
 import 'core/theme/app_theme.dart';
 import 'core/widgets/responsive_wrapper.dart';
+import 'features/profile/services/profile_service.dart';
 import 'features/auth/presentation/login_page.dart';
 import 'package:flutter/foundation.dart'; // For kDebugMode
 import 'features/main/screens/main_screen.dart';
@@ -48,6 +49,7 @@ class WargaPlusApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => AuthService()),
         Provider(create: (_) => AiService()), // Add AI Service
+        Provider(create: (_) => ProfileService()), // Add Profile Service
       ],
       child: MaterialApp(
         title: 'Warga+',

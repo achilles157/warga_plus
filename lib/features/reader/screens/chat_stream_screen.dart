@@ -135,18 +135,30 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
     final bool isFinished = _currentIndex >= _fullScript.length;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F7), // Light grey
+      backgroundColor: const Color(0xFF1E1E2C), // Underground dark theme
       appBar: AppBar(
-        title: Text(widget.subModule.title),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        elevation: 1,
+        title: Row(
+          children: [
+            const Icon(Icons.search, size: 16, color: Colors.white70),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                widget.subModule.title,
+                style: const TextStyle(fontSize: 16),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: const Color(0xFF2A2A3C), // Dark surface
+        foregroundColor: Colors.white,
+        elevation: 0,
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(4),
           child: LinearProgressIndicator(
             value: _fullScript.isEmpty ? 0 : _currentIndex / _fullScript.length,
-            backgroundColor: Colors.grey[200],
-            valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
+            backgroundColor: const Color(0xFF3A3A4C),
+            valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF4CAF50)),
           ),
         ),
       ),
@@ -273,7 +285,7 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
       final options = (nextItem['options'] as List<dynamic>).cast<String>();
       return Container(
         padding: const EdgeInsets.all(16),
-        color: Colors.white,
+        color: const Color(0xFF2A2A3C), // Dark surface
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: options
@@ -293,10 +305,11 @@ class _ChatStreamScreenState extends State<ChatStreamScreen> {
                         },
                         style: OutlinedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 16),
-                          side: const BorderSide(color: Colors.indigo),
+                          side: const BorderSide(color: Color(0xFF6C63FF)),
+                          foregroundColor: Colors.white,
                         ),
                         child: Text(opt,
-                            style: const TextStyle(color: Colors.indigo)),
+                            style: const TextStyle(color: Colors.white)),
                       ),
                     ),
                   ))

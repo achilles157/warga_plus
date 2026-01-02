@@ -69,7 +69,7 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
     return Container(
       height: MediaQuery.of(context).size.height * 0.85,
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: Color(0xFF1E1E2C), // Underground dark
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       child: Column(
@@ -80,7 +80,7 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
             width: 40,
             height: 4,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: Colors.white24,
               borderRadius: BorderRadius.circular(2),
             ),
           ),
@@ -92,11 +92,11 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
               children: [
                 Container(
                   padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.indigo.shade50,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF3A3A4C),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.psychology, color: Colors.indigo),
+                  child: const Icon(Icons.psychology, color: Color(0xFF6C63FF)),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -108,13 +108,14 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                       Text(
                         "Topik: ${widget.releaseTitle}",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
-                          color: Colors.grey[600],
+                          color: Colors.white54,
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -123,30 +124,30 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.close),
+                  icon: const Icon(Icons.close, color: Colors.white54),
                   onPressed: () => Navigator.pop(context),
                 ),
               ],
             ),
           ),
-          const Divider(height: 1),
+          const Divider(height: 1, color: Colors.white12),
 
           // Chat Area
           Expanded(
             child: _messages.isEmpty
-                ? Center(
+                ? const Center(
                     child: Padding(
-                      padding: const EdgeInsets.all(32.0),
+                      padding: EdgeInsets.all(32.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.chat_bubble_outline,
-                              size: 48, color: Colors.grey[300]),
-                          const SizedBox(height: 16),
+                              size: 48, color: Colors.white24),
+                          SizedBox(height: 16),
                           Text(
                             "Tanyakan apa saja tentang rilisan ini.\nAI akan menjawab sesuai konteks materi.",
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: Colors.grey[500]),
+                            style: TextStyle(color: Colors.white38),
                           ),
                         ],
                       ),
@@ -165,13 +166,14 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             decoration: BoxDecoration(
-                              color: Colors.grey[100],
+                              color: const Color(0xFF3A3A4C),
                               borderRadius: BorderRadius.circular(16),
                             ),
                             child: const SizedBox(
                               width: 20,
                               height: 20,
-                              child: CircularProgressIndicator(strokeWidth: 2),
+                              child: CircularProgressIndicator(
+                                  strokeWidth: 2, color: Color(0xFF6C63FF)),
                             ),
                           ),
                         );
@@ -188,7 +190,9 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 16, vertical: 12),
                           decoration: BoxDecoration(
-                            color: isUser ? Colors.indigo : Colors.grey[100],
+                            color: isUser
+                                ? const Color(0xFF6C63FF)
+                                : const Color(0xFF3A3A4C),
                             borderRadius: BorderRadius.only(
                               topLeft: const Radius.circular(16),
                               topRight: const Radius.circular(16),
@@ -198,8 +202,8 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                           ),
                           child: Text(
                             msg['text']!,
-                            style: TextStyle(
-                              color: isUser ? Colors.white : Colors.black87,
+                            style: const TextStyle(
+                              color: Colors.white,
                               height: 1.4,
                             ),
                           ),
@@ -213,10 +217,10 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: const Color(0xFF2A2A3C),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.05),
+                  color: Colors.black.withValues(alpha: 0.2),
                   blurRadius: 10,
                   offset: const Offset(0, -5),
                 ),
@@ -227,14 +231,16 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                 Expanded(
                   child: TextField(
                     controller: _questionController,
+                    style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                       hintText: "Ketik pertanyaan...",
+                      hintStyle: const TextStyle(color: Colors.white38),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24),
                         borderSide: BorderSide.none,
                       ),
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF3A3A4C),
                       contentPadding: const EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 12,
@@ -246,7 +252,7 @@ class _LiveChatSheetState extends State<LiveChatSheet> {
                 const SizedBox(width: 8),
                 Container(
                   decoration: const BoxDecoration(
-                    color: Colors.indigo,
+                    color: Color(0xFF6C63FF),
                     shape: BoxShape.circle,
                   ),
                   child: IconButton(

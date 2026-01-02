@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/services/content_service.dart';
+import '../utils/json_validator.dart';
 
 class JsonImporterView extends StatefulWidget {
   const JsonImporterView({super.key});
@@ -53,143 +54,45 @@ class _JsonImporterViewState extends State<JsonImporterView> {
     final inputContent = _jsonController.text.trim();
     if (inputContent.isEmpty) {
       _failValidation("Input content cannot be empty.");
+      setState(() => _isLoading = false);
       return;
     }
 
     try {
-      // 1. SYNTAX GUARD
+      ValidationResult result;
+
       if (_importMode == 'context') {
-        // Context is raw string, so just check target IDs
-        _validateContextMode(inputContent);
+        result = JsonValidator.validateContext(inputContent,
+            _targetReleaseIdController.text, _targetSubModuleIdController.text);
       } else {
         // Expecting JSON
-        final decoded = jsonDecode(inputContent);
+        try {
+          final decoded = jsonDecode(inputContent);
 
-        // 2. SCHEMA GUARD
-        if (_importMode == 'full') {
-          _validateFullReleaseSchema(decoded);
-        } else if (_importMode == 'submodule') {
-          _validateSubModuleSchema(decoded);
+          if (_importMode == 'full') {
+            result = JsonValidator.validateFullRelease(decoded);
+          } else {
+            // submodule
+            result = JsonValidator.validateSubModule(
+                decoded, _targetReleaseIdController.text);
+          }
+        } on FormatException catch (e) {
+          _failValidation("SYNTAX ERROR: Invalid JSON format.\n${e.message}");
+          setState(() => _isLoading = false);
+          return;
         }
       }
-    } on FormatException catch (e) {
-      _failValidation("SYNTAX ERROR: Invalid JSON format.\n${e.message}");
+
+      if (result.isValid) {
+        _passValidation(result.data, result.summary!);
+      } else {
+        _failValidation(result.errorMessage!);
+      }
     } catch (e) {
       _failValidation("VALIDATION ERROR: $e");
     } finally {
       setState(() => _isLoading = false);
     }
-  }
-
-  void _validateFullReleaseSchema(dynamic decoded) {
-    if (decoded is! Map<String, dynamic>) {
-      throw "JSON must be an Object {} for Full Release.";
-    }
-
-    // Check mandatory fields
-    final requiredFields = [
-      'release_id',
-      'title',
-      'cover_image',
-      'sub_modules'
-    ];
-    for (var field in requiredFields) {
-      if (!decoded.containsKey(field)) {
-        throw "Missing required field: '$field'.";
-      }
-    }
-
-    // Check sub_modules
-    final subModules = decoded['sub_modules'] as List?;
-
-    // Count Bubbles Recursively
-    int totalBubbles = 0;
-    List<String> details = [];
-
-    if (subModules != null) {
-      for (var item in subModules) {
-        if (item is Map<String, dynamic>) {
-          if (item['type'] == 'chat_stream' && item['chat_script'] is List) {
-            final count = (item['chat_script'] as List).length;
-            totalBubbles += count;
-            details.add("${item['id']}: $count bubbles");
-          }
-        }
-      }
-    }
-
-    _passValidation(
-        decoded,
-        "Title: ${decoded['title']}\n"
-        "ID: ${decoded['release_id']}\n"
-        "SubModules: ${subModules?.length ?? 0}\n"
-        "Total Chat Bubbles: $totalBubbles\n"
-        "Details: ${details.take(3).join(', ')}${details.length > 3 ? '...' : ''}");
-  }
-
-  void _validateSubModuleSchema(dynamic decoded) {
-    // Can be List or Map
-    List items = [];
-    if (decoded is Map<String, dynamic>) {
-      items = [decoded];
-    } else if (decoded is List) {
-      items = decoded;
-    } else {
-      throw "JSON must be an Object {} or Array [] for SubModules.";
-    }
-
-    if (_targetReleaseIdController.text.isEmpty) {
-      throw "Target Release ID is required for SubModule import.";
-    }
-
-    int totalBubbles = 0;
-    List<String> details = [];
-
-    // Check items
-    for (var item in items) {
-      if (item is! Map<String, dynamic>) throw "Items must be Objects.";
-      if (!item.containsKey('id')) throw "Item missing 'id'.";
-      if (!item.containsKey('title')) {
-        throw "Item '${item['id']}' missing 'title'.";
-      }
-
-      // Count Bubbles
-      if (item['type'] == 'chat_stream' && item['chat_script'] is List) {
-        final count = (item['chat_script'] as List).length;
-        totalBubbles += count;
-        details.add("${item['id']}: $count bubbles");
-      }
-    }
-
-    _passValidation(
-        decoded is List ? decoded : [decoded],
-        "Action: Add/Update SubModules\n"
-        "Target Release: ${_targetReleaseIdController.text}\n"
-        "Item Count: ${items.length}\n"
-        "Total Chat Bubbles: $totalBubbles\n"
-        "Details: ${details.take(3).join(', ')}${details.length > 3 ? '...' : ''}\n"
-        "IDs: ${items.map((e) => e['id']).take(3).join(', ')}${items.length > 3 ? '...' : ''}");
-  }
-
-  void _validateContextMode(String content) {
-    if (_targetReleaseIdController.text.isEmpty ||
-        _targetSubModuleIdController.text.isEmpty) {
-      throw "Target Release ID and SubModule ID are required.";
-    }
-
-    // Payload construction for Service
-    final payload = {
-      'release_id': _targetReleaseIdController.text.trim(),
-      'sub_module_id': _targetSubModuleIdController.text.trim(),
-      'ai_context': content
-    };
-
-    _passValidation(
-        payload,
-        "Action: Update AI Context (RAG)\n"
-        "Target Release: ${_targetReleaseIdController.text}\n"
-        "Target SubModule: ${_targetSubModuleIdController.text}\n"
-        "Context Length: ${content.length} characters");
   }
 
   void _failValidation(String message) {
