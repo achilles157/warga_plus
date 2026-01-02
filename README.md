@@ -1,25 +1,87 @@
-# Warga+
+# 🇮🇩 WargaPlus
 
-**Platform Gamifikasi Edukasi Sipil & Hukum**
+![App Logo](assets/logo/app_logo.png)
 
-"Duolingo for Civic Education" - Mendemokratisasi hukum & politik agar renyah dikonsumsi.
+> **Platform Edukasi & Interaksi Warga Berbasis Gamifikasi & AI**
 
-## Project Structure
-This project follows a feature-first architecture.
+**WargaPlus** adalah aplikasi mobile inovatif yang mengajak pengguna untuk memahami isu sosial, sejarah, dan hukum dengan cara yang interaktif. Dilengkapi dengan asisten AI "Bung Warga", sistem dokumen tersensor (redacted reader), dan koleksi lencana pencapaian.
 
-- `assets/data/`: Contains JSON data for quiz modules.
-- `lib/features/`: Contains feature-specific code (e.g., `history_quiz`).
-- `lib/shared/`: Shared widgets and utilities.
-- `lib/core/`: Application-wide constants and themes.
+---
 
-## Setup Instructions
+## ✨ Fitur Utama (v1.0)
 
-> **Note**: The Flutter SDK was not automatically installed. You must install it manually to run this project.
+### 🤖 1. Chat dengan Bung Warga (AI)
+Diskusikan topik sensitif dengan **Bung Warga**, AI yang dirancang untuk memberikan perspektif berimbang.
+- **Mode Netral:** Jawaban objektif berbasis fakta.
+- **Mode Thinking:** Analisis mendalam untuk memicu pemikiran kritis.
 
-1.  **Install Flutter SDK**: [Download here](https://docs.flutter.dev/get-started/install/windows)
-2.  **Verify Install**: Run `flutter doctor` in your terminal.
-3.  **Get Dependencies**: Run `flutter pub get` in this directory.
-4.  **Run**: `flutter run`
+### 🕵️‍♂️ 2. Redacted Document Reader
+Pengalaman membaca unik di mana pengguna ditantang untuk memahami konteks dari dokumen-dokumen "rahasia" yang sebagian teksnya disensor (redacted).
+- *Contoh Konten:* Rilis Dokumen Politik, Arsip Sejarah.
 
-## Data
-The initial Vertical Slice data is located in `assets/data/vertical_slice_data.json`.
+### 🏅 3. Gamifikasi & Badges
+Jadilah warga teladan dan kumpulkan lencana berdasarkan aktivitas membaca dan interaksi Anda:
+- **Statesman & Lawmaker:** Untuk penguasaan isu hukum/negara.
+- **Historian:** Untuk pembaca setia arsip sejarah.
+- **Earth Guardian:** Peduli isu lingkungan.
+- **Oligarch Hunter:** (Langka) Untuk investigasi mendalam.
+
+### 📅 4. Lini Masa (Timeline)
+Akses konten yang dirilis secara berkala (Seasons/Chapters) melalui antarmuka timeline yang intuitif. Konten v1.0 meliputi:
+- KUHP 2025
+- Bencana Sumatra
+- Cacat Wawasan (Logical Fallacies)
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+Project ini dibangun menggunakan ekosistem **Flutter** dan **Firebase**:
+
+* **Framework:** Flutter (Dart)
+* **Backend & Auth:** Firebase (Authentication, Firestore)
+* **State Management:** (Sesuai implementasi, misal: Provider/Riverpod/Bloc)
+* **AI Integration:** Integrasi LLM untuk "Bung Warga"
+* **Aset:** Custom UI Assets & Badges
+
+---
+
+## 🚀 Cara Menjalankan (Local Development)
+
+Ikuti langkah ini untuk menjalankan project di mesin lokal Anda:
+
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/username-anda/warga_plus.git](https://github.com/username-anda/warga_plus.git)
+    cd warga_plus
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    flutter pub get
+    ```
+
+3.  **Konfigurasi Firebase**
+    * Pastikan Anda memiliki file `google-services.json` (Android) atau `GoogleService-Info.plist` (iOS) di folder masing-masing.
+    * Atau gunakan FlutterFire CLI untuk mengonfigurasi ulang.
+
+4.  **Jalankan Aplikasi**
+    ```bash
+    flutter run
+    ```
+
+---
+
+## 📂 Struktur Project
+
+```text
+lib/
+├── core/            # Konfigurasi, Tema, Layanan Global (Auth, AI)
+├── features/        # Fitur modular (Auth, Home, Reader, Profile, Admin)
+│   ├── auth/        # Login & Register
+│   ├── home/        # Timeline & Dashboard
+│   ├── reader/      # Chat Stream & Redacted Reader UI
+│   ├── profile/     # User Profile & Badges
+│   └── admin/       # Portal Admin & Import JSON
+├── main.dart        # Entry point
+└── firebase_options.dart
