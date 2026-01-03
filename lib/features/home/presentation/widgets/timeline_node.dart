@@ -141,12 +141,15 @@ class TimelineNode extends StatelessWidget {
                                   ),
                                 ),
 
-                                Container(
-                                    color: Colors.black.withValues(alpha: 0.6),
-                                    child: const Center(
-                                        child: Icon(Icons.check_circle,
-                                            color: Colors.greenAccent,
-                                            size: 40))),
+                                // Checkmark overlay - ONLY show when completed
+                                if (isCompleted)
+                                  Container(
+                                      color:
+                                          Colors.black.withValues(alpha: 0.6),
+                                      child: const Center(
+                                          child: Icon(Icons.check_circle,
+                                              color: Colors.greenAccent,
+                                              size: 40))),
                               ],
                             ),
                     ),

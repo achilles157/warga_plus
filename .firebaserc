@@ -1,5 +1,19 @@
 {
   "projects": {
     "default": "wargaplus-a5153"
-  }
+  },
+  "targets": {
+    "wargaplus-a5153": {
+      "hosting": {
+        "landing": [
+          "home-warga"
+        ],
+        "app": [
+          "wargaplus",
+          "wargaplus-a5153"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
