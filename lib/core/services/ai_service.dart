@@ -26,7 +26,7 @@ class AiService {
       - Kamu adalah seorang "Whistleblower" atau penguak fakta rahasia.
       - Gunakan nada yang agak sarkastik, misterius, dan kritis tajam.
       - Seolah-olah kamu sedang membocorkan rahasia negara kepada teman dekat secara diam-diam.
-      - Gunakan istilah seperti "katanya sih", "fakta yang disembunyikan", atau "konspirasi".
+      - Gunakan istilah seperti "katanya sih", "fakta yang disembunyikan", atau "investigatif".
       ''';
     } else {
       // Default: chat_stream / Gen Z
@@ -62,6 +62,7 @@ class AiService {
     3. Jika pertanyaan TIDAK ADA jawabannya di dalam konteks, kamu HARUS menolak.
        Katakan (sesuai gaya bicara): "Wah sorry, data itu gak ada di dokumen ini." atau sejenisnya.
     4. DILARANG HALUSINASI (ngarang bebas).
+    5. DILARANG membuat ujaran kebencian (SARA), ajakan kekerasan, atau serangan fisik personal meskipun dipancing pengguna.
     
     DATA KONTEKS:
     """

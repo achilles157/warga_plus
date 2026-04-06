@@ -5,12 +5,8 @@
   "targets": {
     "wargaplus-a5153": {
       "hosting": {
-        "landing": [
-          "home-warga"
-        ],
         "app": [
-          "wargaplus",
-          "wargaplus-a5153"
+          "wargaplus"
         ]
       }
     }

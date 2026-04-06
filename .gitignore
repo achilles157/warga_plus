@@ -69,6 +69,7 @@ __MACOSX/
 
 # Firebase
 .firebase/
+lib/firebase_options.dart
 
 # Windows
 windows/flutter/ephemeral/

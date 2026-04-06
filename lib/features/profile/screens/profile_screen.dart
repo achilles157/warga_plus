@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../../../../core/services/auth_service.dart';
 import '../services/profile_service.dart';
+import 'privacy_policy_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -20,13 +21,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F7),
       appBar: AppBar(
-        title: const Text('Identitas Warga'),
+        title: const Text(
+          'Identitas Warga',
+          style: TextStyle(fontWeight: FontWeight.w600),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
+        backgroundColor: const Color(0xFFF5F5F7),
+        foregroundColor: Colors.black87,
         elevation: 0,
       ),
-      extendBodyBehindAppBar: true,
       body: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
         stream: _profileService.getProfileStream(),
         builder: (context, snapshot) {
@@ -79,7 +82,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final int xpToNext = 1000 - currentLevelXp;
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.only(top: 100, left: 24, right: 24, bottom: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       child: Column(
         children: [
           // STREAK BADGE
@@ -342,7 +345,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ).animate().fadeIn(delay: 500.ms),
 
-          const SizedBox(height: 40),
+          const SizedBox(height: 24),
+
+          // Privacy Policy Link
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const PrivacyPolicyScreen(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.shield_outlined, size: 18),
+              label: const Text("Kebijakan Privasi"),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: Colors.grey.shade700,
+                side: BorderSide(color: Colors.grey.shade300),
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 16),
 
           if (context.watch<AuthService>().isAdmin)
             Center(

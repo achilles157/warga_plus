@@ -35,15 +35,6 @@
           "destination": "/index.html"
         }
       ]
-    },
-    {
-      "target": "landing",
-      "public": "warga_landing_page",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
     }
   ]
 }

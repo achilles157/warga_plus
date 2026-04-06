@@ -41,7 +41,7 @@ class ChatBubble extends StatelessWidget {
                   )
                 ],
                 image: const DecorationImage(
-                  image: AssetImage('assets/mascot/bung_warga_neutral.png'),
+                  image: AssetImage('assets/mascot/bung_warga_thinking.png'),
                   fit: BoxFit.cover,
                 ),
               ),
